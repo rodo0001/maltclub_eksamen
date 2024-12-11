@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.png";
 ---
 
 <div x-data="{ showmenu: false }" class="lg:static">
-  <div id="navbar" class="flex flex-row justify-between sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto text-blue-500 pt-6">
+  <div id="navbar" class="flex flex-row justify-between px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto pt-6">
     <div id="logo" class="hover:opacity-75 w-12 max-w-full">
       <a href="/">
         <Image src={logo} alt="billede" />
@@ -36,8 +36,8 @@ import logo from "../assets/images/logo.png";
     </button>
   </div>
 
-  <nav id="mobilmenu" class="fixed right-0 w-full flex flex-col items-center pt-4 bg-blue lg:hidden" x-show="showmenu" x-transition x-cloak>
-    <ul class="text-center space-y-4">
+  <nav id="mobilmenu" class="fixed right-0 w-full flex flex-col items-center pb-4 pt-4 bg-white lg:hidden" x-show="showmenu" x-transition x-cloak>
+    <ul class="text-center text-blue-500 space-y-4">
       <li class="hover:opacity-75"><a href="registrer">VORES ABONNEMENTER</a></li>
       <li class="hover:opacity-75"><a href="ressourcer">OM OS</a></li>
     </ul>
