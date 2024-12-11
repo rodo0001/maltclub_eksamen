@@ -1,6 +1,50 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.png";
 ---
-<div class="max-w-screen-xl mx-auto text-white">
-    Header/Navigation
+
+<div x-data="{ showmenu: false }" class="lg:static">
+  <div id="navbar" class="flex flex-row justify-between sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto text-blue-500 pt-6">
+    <div id="logo" class="hover:opacity-75 w-12 max-w-full">
+      <a href="/">
+        <Image src={logo} alt="billede" />
+      </a>
+    </div>
+    <nav id="desktopmenu" class="hidden font-display lg:flex flex-1 justify-end text-lg">
+      <ul class="flex flex-row gap-8 pr-8">
+        <li class="hover:opacity-75"><a href="#Hvaderplastikforurening">VORES ABONNEMENTER</a></li>
+        <li class="hover:opacity-75"><a href="#Problemetmedplastikforurening">OM OS</a></li>
+      </ul>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"></path>
+        </svg>
+      </div>
+    </nav>
+
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+      <template x-if="!showmenu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"></path>
+        </svg>
+      </template>
+      <template x-if="showmenu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </template>
+    </button>
+  </div>
+
+  <nav id="mobilmenu" class="fixed right-0 w-full flex flex-col items-center pt-4 bg-blue lg:hidden" x-show="showmenu" x-transition x-cloak>
+    <ul class="text-center space-y-4">
+      <li class="hover:opacity-75"><a href="registrer">VORES ABONNEMENTER</a></li>
+      <li class="hover:opacity-75"><a href="ressourcer">OM OS</a></li>
+    </ul>
+    <div class="pt-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"></path>
+      </svg>
+    </div>
+  </nav>
 </div>
-    

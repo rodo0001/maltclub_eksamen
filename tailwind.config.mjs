@@ -70,9 +70,10 @@ export default {
 
       /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
-        display: ["Courier", "Alfa Slab One"] /* eksempel på ekstra font */,
+        sans: ["Roboto", "sans-serif"], // Primær font til body og mindre overskrifter
+        display: ["Koulen", "sans-serif"], // Font til h1 og h2
       },
+
       /* Tilføj dit typografiske hierarki herunder */
 
       fontWeight: {
