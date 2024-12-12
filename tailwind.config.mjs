@@ -80,7 +80,7 @@ export default {
         body: ["1rem", { lineHeight: "1.5rem" }],
         xsmall: ["0.5rem", { lineHeight: "0.75rem" }],
         small: ["0.75rem", { lineHeight: "1rem" }],
-        medium: ["0.875rem", { lineHeight: "0.1.125rem" }],
+        medium: ["4.375rem", { lineHeight: "4.5rem" }],
         large: ["5.625rem", { lineHeight: "5.625rem" }],
         xlarge: ["9.75rem", { lineHeight: "8.125rem" }],
         // "2xlarge": ["2rem", { lineHeight: "2.25rem" }],

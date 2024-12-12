@@ -13,11 +13,10 @@ const sizeClasses = {
 };
 ---
 
-<div class="flex justify-center items-center pt-16 lg:p-8">
-  <a href={href} class:list={[variantClasses[variant], sizeClasses[size]]} target={target}>
-    <slot />
-  </a>
-</div>
+<a href={href} class:list={[variantClasses[variant], sizeClasses[size]]} target={target}>
+  <slot />
+</a>
+
 <!-- <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
     <Button variant="secondary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
     <Button variant="primary" size="large" href="/your-link">FORTSÆT TIL BETALING</Button> -->
