@@ -29,16 +29,16 @@ import klat from "../assets/images/klat.svg";
     <h3 class="flex justify-center text-blue-500 text-sm font-bold lg:pt-4 lg:text-xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
 
     <div class="relative z-20 flex justify-center px-4 sm:px-4 md:px-6 lg:pt-7 lg:px-2 mx-auto">
-      <Image src={wildtiger} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
-      <Image src={wa} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
-      <Image src={wave} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
-      <Image src={sweetoliven} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
-      <Image src={takeasip} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
-      <Image src={goldentaste} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
-      <Image src={bobble} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
+      <Image src={wildtiger} alt="billede" class="beer-image w-14 sm:w-20 lg:w-44" />
+      <Image src={wa} alt="billede" class="beer-image w-14 sm:w-20 lg:w-44" />
+      <Image src={wave} alt="billede" class="beer-image w-14 sm:w-20 lg:w-44" />
+      <Image src={sweetoliven} alt="billede" class="beer-image w-14 sm:w-20 lg:w-44" />
+      <Image src={takeasip} alt="billede" class="beer-image w-14 sm:w-20 lg:w-44" />
+      <Image src={goldentaste} alt="billede" class="beer-image w-14 sm:w-20 lg:w-44" />
+      <Image src={bobble} alt="billede" class="beer-image w-14 sm:w-20 lg:w-44" />
     </div>
 
-    <div class="relative z-20 flex justify-center pt-7">
+    <div class="relative z-20 flex justify-center pt-6">
       <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
     </div>
 
@@ -57,8 +57,8 @@ import klat from "../assets/images/klat.svg";
         </div>
       </div>
 
-      <div class="bg-rosa-500 w-96 h-80 lg:pt-4 rounded">
-        <Image src={boks} alt="billede" class="w-80 m-auto" />
+      <div class="bg-rosa-500 w-96 h-80 lg:pt-4 rounded flex justify-center items-center">
+        <Image src={boks} alt="billede" class="w-80 transform transition duration-300 ease-in-out hover:scale-150" />
       </div>
     </div>
   </section>
@@ -125,8 +125,8 @@ import klat from "../assets/images/klat.svg";
     </div>
   </section>
 
-  <section class="pt-64">
-    <Image src={car} alt="Baggrund" class="w-52 pt-36 lg:w-auto" />
+  <section class="pt-48">
+    <Image src={car} alt="Baggrund" class="w-52 pt-36 lg:w-auto fotoinview" />
 
     <div class="bg-rosa-500 py-32 pl-4">
       <h2 class="text-blue-500 text-large lg:flex lg:justify-center">VI LEVERER DIN ORDRE</h2>
@@ -208,6 +208,13 @@ import klat from "../assets/images/klat.svg";
 </style>
 
 <script>
+  /* Import af Motion One biblioteket */
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+  inView(".fotoinview", () => {
+    animate(".fotoinview", { x: [-2000, 0] }, { duration: 3 });
+  });
+  animate("body", { opacity: [0, 1] }, { duration: 1 });
+
   import Splitting from "splitting";
   import "splitting/dist/splitting.css"; // Importer Splitting.js CSS
   import gsap from "gsap";
