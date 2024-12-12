@@ -130,6 +130,16 @@ export default {
         inner50: "inset 0px 4px 4px 0px rgba(222, 220, 216, 0.50)", //* x y blur spread farve / 50% opacity */,
       },
     },
+
+    animation: {
+      "infinite-scroll": "infinite-scroll 25s linear infinite",
+    },
+    keyframes: {
+      "infinite-scroll": {
+        from: { transform: "translateX(0)" },
+        to: { transform: "translateX(-100%)" },
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
 

@@ -25,20 +25,19 @@ import klat from "../assets/images/klat.svg";
 
 <MainLayout title="Maltclub">
   <section class="relative">
-    <div class="text" id="herotitle">
-      <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge">MALTCLUB</h1>
-      <h3 class="flex justify-center text-blue-500 text-sm font-bold lg:pt-4 lg:text-xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
-    </div>
+    <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge">MALTCLUB</h1>
+    <h3 class="flex justify-center text-blue-500 text-sm font-bold lg:pt-4 lg:text-xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
 
     <div class="relative z-20 flex justify-center px-4 sm:px-4 md:px-6 lg:pt-7 lg:px-2 mx-auto">
-      <Image src={wildtiger} alt="billede" class="w-14 sm:w-20 lg:w-48" />
-      <Image src={wa} alt="billede" class="w-14 sm:w-20 lg:w-48" />
-      <Image src={wave} alt="billede" class="w-14 sm:w-20 lg:w-48" />
-      <Image src={sweetoliven} alt="billede" class="w-14 sm:w-20 lg:w-48" />
-      <Image src={takeasip} alt="billede" class="w-14 sm:w-20 lg:w-48" />
-      <Image src={goldentaste} alt="billede" class="w-14 sm:w-20 lg:w-48" />
-      <Image src={bobble} alt="billede" class="w-14 sm:w-20 lg:w-48" />
+      <Image src={wildtiger} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
+      <Image src={wa} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
+      <Image src={wave} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
+      <Image src={sweetoliven} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
+      <Image src={takeasip} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
+      <Image src={goldentaste} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
+      <Image src={bobble} alt="billede" class="beer-image w-14 sm:w-20 lg:w-48" />
     </div>
+
     <div class="relative z-20 flex justify-center pt-7">
       <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
     </div>
@@ -163,6 +162,50 @@ import klat from "../assets/images/klat.svg";
     </div>
   </section>
 </MainLayout>
+
+<style>
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%) scale(5);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(10%) scale(1.05);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  .beer-image {
+    animation: slide-in 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  /* Forsinkelse for hver billede */
+
+  .beer-image:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .beer-image:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .beer-image:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .beer-image:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  .beer-image:nth-child(5) {
+    animation-delay: 1s;
+  }
+  .beer-image:nth-child(6) {
+    animation-delay: 1.2s;
+  }
+  .beer-image:nth-child(7) {
+    animation-delay: 1.4s;
+  }
+</style>
 
 <script>
   import Splitting from "splitting";

@@ -3,6 +3,27 @@ import { Image } from "astro:assets";
 import logo from "../assets/images/logo.png";
 ---
 
+<section class="whitespace-nowrap overflow-x-hidden text-small bg-blue-500 text-grey-500 py-4">
+  <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6">
+    <span>Fri fragt</span>
+    <span>20% ved tilmelding af nyhedsbrev</span>
+    <span>Køb kun ved abonnement</span>
+    <span>Nye øl hver måned</span>
+  </div>
+  <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6" aria-hidden="true">
+    <span>Fri fragt</span>
+    <span>20% ved tilmelding af nyhedsbrev</span>
+    <span>Køb kun ved abonnement</span>
+    <span>Nye øl hver måned</span>
+  </div>
+  <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6" aria-hidden="true">
+    <span>Fri fragt</span>
+    <span>20% ved tilmelding af nyhedsbrev</span>
+    <span>Køb kun ved abonnement</span>
+    <span>Nye øl hver måned</span>
+  </div>
+</section>
+
 <div x-data="{ showmenu: false }" class="lg:static">
   <div id="navbar" class="flex flex-row justify-between px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto pt-6">
     <div id="logo" class="hover:opacity-75 w-12 max-w-full">
