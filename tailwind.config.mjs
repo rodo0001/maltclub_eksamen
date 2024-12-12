@@ -76,6 +76,31 @@ export default {
 
       /* Tilføj dit typografiske hierarki herunder */
 
+      fontSize: {
+        body: ["1rem", { lineHeight: "1.5rem" }],
+        xsmall: ["0.5rem", { lineHeight: "0.75rem" }],
+        small: ["0.75rem", { lineHeight: "1rem" }],
+        medium: ["0.875rem", { lineHeight: "0.1.125rem" }],
+        large: ["5.625rem", { lineHeight: "5.625rem" }],
+        xlarge: ["9.75rem", { lineHeight: "8.125rem" }],
+        // "2xlarge": ["2rem", { lineHeight: "2.25rem" }],
+        // "3xlarge": ["2.5rem", { lineHeight: "2.75rem" }],
+        // "4xlarge": ["3rem", { lineHeight: "3.25rem" }],
+        // "5xlarge": ["3.625rem", { lineHeight: "3.875rem" }],
+        // "6xlarge": ["5.875rem", { lineHeight: "6.125rem" }],
+      },
+      // 6xlarge 94px - linehigh 98
+      // 5xlarge: 58 px - linehigh 62px
+      // 4xlarge: 48 px - linehigh 52px
+      // 3xlarge: 40 px - linehigh 44px
+      // 2xlarge: 32 px - linehigh 36px
+      // Xlarge: 150 px - linehigh 130px
+      // large: 18 px - linehigh 22px
+      // medium: 14 px - linehigh 18px
+      // small: 12 px - linehigh 16 px
+      // xsmall: 8 px - linehigh 12 px
+      // Body: 16px - linehigh 24px
+
       fontWeight: {
         regular: "400",
         Bold: "700",

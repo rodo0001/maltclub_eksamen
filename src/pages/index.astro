@@ -24,31 +24,36 @@ import nyhed from "../assets/images/nyhed.png";
 ---
 
 <MainLayout title="Maltclub">
-  <section>
-    <h1 class="lg:flex lg:justify-center text-blue-color-blue-500">MALTCLUB</h1>
-    <h3 class="lg:flex lg:justify-center text-blue-color-blue-500 font-bold text-4xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
+  <section class="relative">
+    <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge">MALTCLUB</h1>
+    <h3 class="flex justify-center text-blue-500 text-medium font-bold lg:pt-4 lg:text-xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
 
-    <div class="grid grid-cols-7">
-      <Image src={wildtiger} alt="billede" class="w-40" />
-      <Image src={wa} alt="billede" class="w-40" />
-      <Image src={wave} alt="billede" class="w-40" />
-      <Image src={sweetoliven} alt="billede" class="w-40" />
-      <Image src={takeasip} alt="billede" class="w-40" />
-      <Image src={goldentaste} alt="billede" class="w-40" />
-      <Image src={bobble} alt="billede" class="w-40" />
+    {/* Billedernes container */}
+    <div class="relative z-20 flex justify-center px-4 sm:px-4 md:px-6 lg:pt-7 lg:px-2 mx-auto">
+      <Image src={wildtiger} alt="billede" class="w-14 sm:w-20 lg:w-48" />
+      <Image src={wa} alt="billede" class="w-14 sm:w-20 lg:w-48" />
+      <Image src={wave} alt="billede" class="w-14 sm:w-20 lg:w-48" />
+      <Image src={sweetoliven} alt="billede" class="w-14 sm:w-20 lg:w-48" />
+      <Image src={takeasip} alt="billede" class="w-14 sm:w-20 lg:w-48" />
+      <Image src={goldentaste} alt="billede" class="w-14 sm:w-20 lg:w-48" />
+      <Image src={bobble} alt="billede" class="w-14 sm:w-20 lg:w-48" />
     </div>
-    <div class="py-52 bg-rosa-color-rosa-500"></div>
+    <div class="relative z-20">
+      <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
+    </div>
+
+    <div class="absolute inset-0 py-20 lg:py-52 bg-rosa-500 top-36 lg:top-72 z-10"></div>
   </section>
 
-  <section class="pt-28 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
-    <h2 class="text-blue-color-blue-500 pb-16">BOKS ABONNEMENT</h2>
+  <section class="pt-36 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
+    <h2 class="text-blue-500 pb-16">BOKS ABONNEMENT</h2>
     <div class="lg:grid lg:grid-cols-2 gap-20">
       <div>
-        <h3 class="text-4xl font-bold text-blue-color-blue-500">GØR HVER MÅNED TIL EN SMAGSREJSE!</h3>
-        <p class="text-blue-color-blue-500 pt-7">Vælg et øl abonnement, der passer til dig, og oplev nye håndplukkede specialøl, som du ikke finder andre steder kun et klik væk.</p>
-        <p class="text-blue-color-blue-500 pb-10 pt-4">Find din favorit i dag og gør hver måned til noget særligt!</p>
+        <h3 class="text-4xl font-bold text-blue-500">GØR HVER MÅNED TIL EN SMAGSREJSE!</h3>
+        <p class="text-blue-500 pt-7">Vælg et øl abonnement, der passer til dig, og oplev nye håndplukkede specialøl, som du ikke finder andre steder kun et klik væk.</p>
+        <p class="text-blue-500 pb-10 pt-4">Find din favorit i dag og gør hver måned til noget særligt!</p>
       </div>
-      <div class="bg-rosa-color-rosa-500 w-96 h-72 pt-4 rounded">
+      <div class="bg-rosa-500 w-96 h-72 pt-4 rounded">
         <Image src={boks} alt="billede" class="w-72 m-auto" />
       </div>
     </div>
@@ -57,54 +62,53 @@ import nyhed from "../assets/images/nyhed.png";
   <section class="pt-36"></section>
 
   <section class="pt-36 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
-    <h2 class="text-blue-color-blue-500 flex justify-center">DINE FORDELE</h2>
-    <h2 class="text-blue-color-blue-500 flex justify-center">VED ET MALTCLUB ABONNEMENT</h2>
+    <h2 class="text-blue-500 flex justify-center">DINE FORDELE</h2>
+    <h2 class="text-blue-500 flex justify-center">VED ET MALTCLUB ABONNEMENT</h2>
     <div>
       <Image src={info1} alt="billede" class="w-60" />
-      <h3 class="text-xl font-bold">BESTIL DIT MALTCLUB ØL ABONNMENT</h3>
-      <p>Vælg hvilket øl abonnement du ønsker at modtage. Få leveret et lækkert udvalg af kvalitetsøl fra danske og udenlandske bryggerier direkte hjem til dig eller din nærmeste pakkeshop.</p>
+      <h3 class="text-xl font-bold text-blue-500">BESTIL DIT MALTCLUB ØL ABONNMENT</h3>
+      <p class="text-blue-500">Vælg hvilket øl abonnement du ønsker at modtage. Få leveret et lækkert udvalg af kvalitetsøl fra danske og udenlandske bryggerier direkte hjem til dig eller din nærmeste pakkeshop.</p>
     </div>
 
     <div>
       <Image src={info2} alt="billede" class="w-60" />
-      <h3 class="text-xl font-bold">NYD DINE ØL I GODT SELVSKAB</h3>
-      <p>Inviter gode venner eller familie på besøg og byd på lækre specialøl. Med et MaltClub øl abonnement er du sikker på at kunne byde på gode øl til enhver lejlighed - med mindre du selvfølgelig har nået at drikke dine øl inden du får gæster på besøg.</p>
+      <h3 class="text-xl font-bold text-blue-500">NYD DINE ØL I GODT SELVSKAB</h3>
+      <p class="text-blue-500">Inviter gode venner eller familie på besøg og byd på lækre specialøl. Med et MaltClub øl abonnement er du sikker på at kunne byde på gode øl til enhver lejlighed - med mindre du selvfølgelig har nået at drikke dine øl inden du får gæster på besøg.</p>
     </div>
 
     <div>
       <Image src={info3} alt="billede" class="w-24" />
-      <h3 class="text-xl font-bold">UNIKKE OG SMAGSVÆKKENDE</h3>
-      <p>MaltClub giver dig en kulinarisk smagsoplevelse med et udvalg af unikke specialøl. Samtidig sparer du tid og får adgang til varianter, som du måske aldrig ville opdage i dit lokale supermarked.</p>
+      <h3 class="text-xl font-bold text-blue-500">UNIKKE OG SMAGSVÆKKENDE</h3>
+      <p class="text-blue-500">MaltClub giver dig en kulinarisk smagsoplevelse med et udvalg af unikke specialøl. Samtidig sparer du tid og får adgang til varianter, som du måske aldrig ville opdage i dit lokale supermarked.</p>
     </div>
 
     <div>
       <Image src={info4} alt="billede" class="w-36" />
-      <h3 class="text-xl font-bold">SPAR TID OG PENGE</h3>
-      <p>Hos MaltClub kombinerer vi smag og værdi, så du kan nyde unikke øl af høj kvalitet til billigere penge - uden at bruge tid på at lede efter dem.</p>
+      <h3 class="text-xl font-bold text-blue-500">SPAR TID OG PENGE</h3>
+      <p class="text-blue-500">Hos MaltClub kombinerer vi smag og værdi, så du kan nyde unikke øl af høj kvalitet til billigere penge - uden at bruge tid på at lede efter dem.</p>
     </div>
   </section>
 
   <section class="pt-36">
-    <div class="bg-rosa-color-rosa-500 py-36 lg:grid lg:grid-cols-2">
-      <h3 class="text-4xl font-bold pl-4 lg:pl-64 text-blue-color-blue-500">FLEKSIBILITET PÅ <br />DINE PRÆMISSER</h3>
-      <p class="pl-4 pt-5 lg:pt-0 lg:w-3/5 lg:pl-0 text-blue-color-blue-500">Hos Maltclub gør vi det nemt for dig. Opret dit abonnement på få minutter, og nyd dine specialøl uden bekymringer. Har du brug for en pause? Opsig dit abonnement lige så nemt, som du oprettede det - helt uden bøvl.</p>
+    <div class="bg-rosa-500 py-36 lg:grid lg:grid-cols-2">
+      <h3 class="text-4xl font-bold pl-4 lg:pl-64 text-blue-500">FLEKSIBILITET PÅ <br />DINE PRÆMISSER</h3>
+      <p class="pl-4 pt-5 lg:pt-0 lg:w-3/5 lg:pl-0 text-blue-500">Hos Maltclub gør vi det nemt for dig. Opret dit abonnement på få minutter, og nyd dine specialøl uden bekymringer. Har du brug for en pause? Opsig dit abonnement lige så nemt, som du oprettede det - helt uden bøvl.</p>
     </div>
   </section>
 
   <section class="pt-36">
-    <div class="bg-rosa-color-rosa-500 py-44 pl-4">
-      <h2 class="text-blue-color-blue-500 lg:flex lg:justify-center">VI LERVERER DIN ORDRE</h2>
-      <p class="text-blue-color-blue-500 lg:flex lg:justify-center pt-4">Læn dig tilbage - vi leverer dine øl fra MaltClub i starten af hver måned. Øllene leveres direkte hjem til dig eller til nærmeste pakkeshop - det kunne ikke være lettere!</p>
+    <div class="bg-rosa-500 py-44 pl-4">
+      <h2 class="text-blue-500 lg:flex lg:justify-center">VI LERVERER DIN ORDRE</h2>
+      <p class="text-blue-500 lg:flex lg:justify-center pt-4">Læn dig tilbage - vi leverer dine øl fra MaltClub i starten af hver måned. Øllene leveres direkte hjem til dig eller til nærmeste pakkeshop - det kunne ikke være lettere!</p>
     </div>
   </section>
 
-  <section class="bg-blue-color-blue-500 py-28">
-    <h3 class="text-grey-color-grey-500 text-4xl flex justify-center pl-7">Tilmeld dig vores nyhedsbrev og spar 20% på første måned</h3>
-    <p class="flex justify-center text-grey-color-grey-500 pt-4 pl-7">Hop med på bølgen og start dit øl-eventyr med 20% rabat i første måned!</p>
+  <section class="bg-blue-500 py-28">
+    <h3 class="text-grey-500 text-4xl flex justify-center pl-7">Tilmeld dig vores nyhedsbrev og spar 20% på første måned</h3>
+    <p class="flex justify-center text-grey-500 pt-4 pl-7">Hop med på bølgen og start dit øl-eventyr med 20% rabat i første måned!</p>
 
     <form class="flex flex-col items-center space-y-4 w-full max-w-sm mx-auto pt-4">
       <input type="email" placeholder="Indtast din e-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required />
-      <button type="submit" class="w-40 border border-orange-color-orange-500 bg-grey-color-grey-500 text-orange-color-orange-500 font-semibold py-2 rounded shadow-md hover:border-blue-color-blue-500 hover:text-blue-color-blue-500 transition-colors"> Tilmeld </button>
     </form>
   </section>
 </MainLayout>
