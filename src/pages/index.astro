@@ -10,7 +10,7 @@ import sweetoliven from "../assets/images/sweetoliven_maltclub.png";
 import takeasip from "../assets/images/takeasip_maltclub.png";
 import goldentaste from "../assets/images/goldentaste_maltclub.png";
 import bobble from "../assets/images/bobble_maltclub.png";
-import boks from "../assets/images/boks.png";
+import boks from "../assets/images/boks.svg";
 import beerglass1 from "../assets/images/beer_glass1.svg";
 import beerglass2 from "../assets/images/beer_glass2.svg";
 import background1 from "../assets/images/background_image1.svg";
@@ -19,7 +19,7 @@ import info1 from "../assets/images/info1.svg";
 import info2 from "../assets/images/info2.svg";
 import info3 from "../assets/images/info3.svg";
 import info4 from "../assets/images/info4.svg";
-import car from "../assets/images/info4.svg";
+import car from "../assets/images/beer_car.png";
 ---
 
 <MainLayout title="Maltclub">
@@ -41,7 +41,7 @@ import car from "../assets/images/info4.svg";
       <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
     </div>
 
-    <div class="absolute inset-0 py-20 lg:py-52 bg-rosa-500 top-36 lg:top-72 z-10"></div>
+    <div class="absolute inset-0 py-20 lg:py-56 bg-rosa-500 top-36 lg:top-72 z-10"></div>
   </section>
 
   <section class="pt-36 pb-36 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
@@ -66,14 +66,10 @@ import car from "../assets/images/info4.svg";
     <div class="absolute inset-0 z-10">
       <Image src={background1} alt="billede" class="" />
     </div>
-
-    <!-- <div class="relative z-20 pl-80 pt-28 min-h-screen">
-      <Image src={beerglass1} alt="Beer Glass" class="w-1/3 sm:w-1/4 lg:w-5/12" />
-    </div> -->
   </section>
 
   <section class="pt-80 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
-    <h2 class="text-blue-500 flex justify-center text-large">DINE FORDELE</h2>
+    <h2 class="text-blue-500 flex justify-center text-large pt-20">DINE FORDELE</h2>
     <h2 class="text-blue-500 flex justify-center">VED ET MALTCLUB ABONNEMENT</h2>
     <div class="pt-28">
       <Image src={info1} alt="billede" class="w-60" />
@@ -101,12 +97,13 @@ import car from "../assets/images/info4.svg";
   </section>
 
   <section class="pt-36">
-    <div class="bg-rosa-500 py-36">
-      <div class="lg:grid lg:grid-cols-2">
+    <div class="bg-rosa-500 py-32">
+      <div class="lg:flex lg:justify-center gap-10">
         <h3 class="text-4xl font-bold pl-4 lg:pl-64 text-blue-500">FLEKSIBILITET PÅ <br />DINE PRÆMISSER</h3>
-        <p class="pl-4 pt-5 lg:pt-0 lg:w-3/5 lg:pl-0 pb-4 text-blue-500">Hos Maltclub gør vi det nemt for dig. Opret dit abonnement på få minutter, og nyd dine specialøl uden bekymringer. Har du brug for en pause? Opsig dit abonnement lige så nemt, som du oprettede det - helt uden bøvl.</p>
+        <p class="pl-4 pt-5 lg:pt-0 lg:w-2/6 lg:pl-0 pb-4 text-blue-500">Hos Maltclub gør vi det nemt for dig. Opret dit abonnement på få minutter, og nyd dine specialøl uden bekymringer. Har du brug for en pause? Opsig dit abonnement lige så nemt, som du oprettede det - helt uden bøvl.</p>
       </div>
-      <div class="w-40">
+
+      <div class="flex justify-center gap-10 pt-10">
         <Button variant="primary" size="medium" href="/your-link"> KØB ABONNEMENT </Button>
         <Button variant="secondary" size="medium" href="/your-link"> OPSIG ABONNEMENT </Button>
       </div>
@@ -115,15 +112,15 @@ import car from "../assets/images/info4.svg";
 
   <section class="relative lg:w-full lg:min-h-screen">
     <div class="absolute inset-0 z-10">
-      <Image src={background2} alt="Baggrund" class="" />
+      <Image src={background1} alt="Baggrund" class="" />
     </div>
   </section>
 
-  <section class="pt-96">
-    <Image src={beer_car} alt="Baggrund" class="" />
+  <section class="pt-64">
+    <Image src={car} alt="Baggrund" class="w-52 pt-36 lg:w-auto" />
 
-    <div class="bg-rosa-500 py-44 pl-4">
-      <h2 class="text-blue-500 text-large lg:flex lg:justify-center">VI LERVERER DIN ORDRE</h2>
+    <div class="bg-rosa-500 py-32 pl-4">
+      <h2 class="text-blue-500 text-large lg:flex lg:justify-center">VI LEVERER DIN ORDRE</h2>
       <div class="lg:flex lg:justify-center">
         <p class="text-blue-500 lg:w-3/6 pt-4 lg:m-auto">Læn dig tilbage - vi leverer dine øl fra MaltClub i starten af hver måned. Øllene leveres direkte hjem til dig eller til nærmeste pakkeshop - det kunne ikke være lettere!</p>
       </div>
@@ -144,13 +141,13 @@ import car from "../assets/images/info4.svg";
     </form>
   </section>
 
-  <section class="lg:px-2 max-w-screen-xl mx-auto pb-36">
+  <section class="lg:px-2 max-w-screen-xl mx-auto pb-36 pl-4">
     <h2 class="text-large pt-36 pb-14">BESTSELLER</h2>
-    <div class="flex justify-center">
-      <Image src={sweetoliven} alt="Baggrund" class="w-56 rotate-12" />
-      <div class="w-2/4 pt-72 pl-32">
+    <div class="lg:flex lg:justify-center">
+      <Image src={sweetoliven} alt="Baggrund" class="w-36 rotate-12 lg:w-56" />
+      <div class="pt-10 lg:w-2/4 lg:pt-72 lg:pl-32">
         <h2 class="text-medium">SWEET OLIVE</h2>
-        <p>Nyd vores organiske bestseller - en harmonisk balance af friske noter og uventede smagsnuancer – en ægte smagsoplevelse i hvert glas.</p>
+        <p>Nyd vores organiske bestseller - en harmonisk balance af friske noter og uventede smagsnuancer - en ægte smagsoplevelse i hvert glas.</p>
         <p>Denne bestseller er altid med i vores abonnementer, så ligegyldigt hvilken pakke du køber vil du altid kunne nyde denne lækre øl.</p>
       </div>
     </div>
