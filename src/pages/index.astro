@@ -25,10 +25,11 @@ import klat from "../assets/images/klat.svg";
 
 <MainLayout title="Maltclub">
   <section class="relative">
-    <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge">MALTCLUB</h1>
-    <h3 class="flex justify-center text-blue-500 text-sm font-bold lg:pt-4 lg:text-xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
+    <div class="text" id="herotitle">
+      <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge">MALTCLUB</h1>
+      <h3 class="flex justify-center text-blue-500 text-sm font-bold lg:pt-4 lg:text-xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
+    </div>
 
-    {/* Billedernes container */}
     <div class="relative z-20 flex justify-center px-4 sm:px-4 md:px-6 lg:pt-7 lg:px-2 mx-auto">
       <Image src={wildtiger} alt="billede" class="w-14 sm:w-20 lg:w-48" />
       <Image src={wa} alt="billede" class="w-14 sm:w-20 lg:w-48" />
@@ -162,3 +163,41 @@ import klat from "../assets/images/klat.svg";
     </div>
   </section>
 </MainLayout>
+
+<script>
+  import Splitting from "splitting";
+  import "splitting/dist/splitting.css"; // Importer Splitting.js CSS
+  import gsap from "gsap";
+  document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("overlay");
+    const herotitle = document.getElementById("herotitle").querySelector("h1");
+
+    if (herotitle) {
+      const result = Splitting({ target: herotitle, by: "chars" });
+
+      const chars = result[0].chars;
+
+      const tl = gsap.timeline();
+
+      tl.to(overlay, {
+        duration: 1,
+        scaleY: 0,
+        transformOrigin: "top",
+        ease: "power2.inOut",
+      });
+
+      tl.from(
+        chars,
+        {
+          opacity: 0,
+          y: 80,
+          rotateX: -90,
+          stagger: 0.05,
+          duration: 1,
+          ease: "back.out(1.7)",
+        },
+        "-=0.5"
+      );
+    }
+  });
+</script>
