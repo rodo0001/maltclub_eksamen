@@ -64,17 +64,61 @@ import gif from "../assets/images/bubbles.gif";
     </div>
   </section>
 
-  <section class="relative lg:w-full lg:min-h-screen">
+  <section class="relative lg:w-full lg:min-h-screen flex flex-wrap overflow-hidden">
     <!-- Baggrundsbillede -->
-    <div class="absolute inset-0 z-10">
+    <div class="absolute z-1 w-full h-full">
       <Image src={background1} alt="Baggrund" class="w-full h-full object-cover" />
     </div>
 
-    <!-- GIF Billede -->
-    <div class="absolute inset-0 top-96 left-2/4 z-20">
-      <Image src={gif} alt="GIF" class="w-7" />
+    <!-- Vores billeder og tekst -->
+    <div class="relative z-20 flex w-full justify-center items-center">
+      <div class="container lg:container box-border w-full h-full mx-auto flex justify-center items-center flex-wrap">
+        <!-- Billede og GIF -->
+        <div class="sm:w-[41%] box-border relative">
+          <div>
+            <Image src={beerglass1} alt="øl" class="w-96 h-auto" />
+          </div>
+          <div class="absolute lg:top-[46%] lg:left-[24%] lg:transform -translate-x-1/2 z-20 max-w-[250%] mix-blend-soft-light">
+            <Image src={gif} alt="GIF" class="w-7 h-auto" />
+          </div>
+        </div>
+
+        <!-- Tekst -->
+        <div class="w-[41.66667%]">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- <section class="relative lg:w-full lg:min-h-screen flex flex-wrap overflow-hidden">
+    
+    <div class="absolute z-1 max-h-full overflow-hidden w-full">
+      <Image src={background1} alt="Baggrund" class="w-full h-full object-cover object-top" />
+    </div>
+
+   
+    <div class="relative z-20 flex w-full justify-center items-center">
+      <div class="container lg:container box-border w-full max-h-full mx-auto flex justify-center items-center flex-wrap">
+        <div class="sm:w-[41%] box-border">
+          <div class="">
+            <Image src={beerglass1} alt="øl" class="w-96" />
+          </div>
+          <div class="absolute lg:top-[46%] lg:left-[24%] lg:transform -translate-x-1/2 z-20 max-w-[250%] mix-blend-soft-light">
+            <Image src={gif} alt="GIF" class="w-7" />
+          </div>
+        </div>
+
+        <div class="w-[41.66667%]">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
   <section class="pt-28 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
     <div class="relative">
@@ -127,8 +171,17 @@ import gif from "../assets/images/bubbles.gif";
   </section>
 
   <section class="relative lg:w-full lg:min-h-screen">
-    <div class="absolute inset-0 z-10">
-      <Image src={background2} alt="Baggrund" class="" />
+    <div>
+      <Image src={background2} alt="Baggrund" class="absolute inset-0 z-0" />
+
+      <div class="absolute lg:top-[20rem] lg:left-[19rem] lg:transform -translate-x-1/2 z-20">
+        <Image src={gif} alt="GIF" class="w-7" />
+      </div>
+      <div class="w-3/4 grid place-content-center relative z-20">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+      </div>
     </div>
   </section>
 
