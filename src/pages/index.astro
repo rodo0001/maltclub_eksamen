@@ -13,7 +13,7 @@ import bobble from "../assets/images/bobble_maltclub.png";
 import boks from "../assets/images/boks.svg";
 import beerglass1 from "../assets/images/beer_glass1.svg";
 import beerglass2 from "../assets/images/beer_glass2.svg";
-import background1 from "../assets/images/background_image1.svg";
+import background_image1 from "../assets/images/background_image1.svg";
 import background2 from "../assets/images/background_image2.svg";
 import info1 from "../assets/images/info1.svg";
 import info2 from "../assets/images/info2.svg";
@@ -22,6 +22,8 @@ import info4 from "../assets/images/info4.svg";
 import car from "../assets/images/beer_car.png";
 import klat from "../assets/images/klat.svg";
 import gif from "../assets/images/bubbles.gif";
+import bg from "../assets/images/bg.svg";
+import bg2 from "../assets/images/bg2.svg";
 ---
 
 <MainLayout title="Maltclub">
@@ -64,91 +66,63 @@ import gif from "../assets/images/bubbles.gif";
     </div>
   </section>
 
-  <section class="relative lg:w-full lg:min-h-screen flex flex-wrap overflow-hidden">
+  <section class="relative lg:min-h-screen flex flex-wrap overflow-hidden">
     <!-- Baggrundsbillede -->
     <div class="absolute z-1 w-full h-full">
-      <Image src={background1} alt="Baggrund" class="w-full h-full object-cover" />
+      <Image src={bg2} alt="Baggrund" class="w-full h-full object-cover" />
     </div>
 
     <!-- Vores billeder og tekst -->
-    <div class="relative z-20 flex w-full justify-center items-center">
-      <div class="container lg:container box-border w-full h-full mx-auto flex justify-center items-center flex-wrap">
+    <div class="relative z-20 flex w-full items-end">
+      <div class="container lg:container box-border w-full h-[80vh] mx-auto flex justify-center items-center flex-wrap">
         <!-- Billede og GIF -->
-        <div class="sm:w-[41%] box-border relative">
-          <div>
+        <div class="sm:w-[41%] box-border relative pl-10">
+          <div class="flex place-content-end pt-8">
             <Image src={beerglass1} alt="øl" class="w-96 h-auto" />
           </div>
-          <div class="absolute lg:top-[46%] lg:left-[24%] lg:transform -translate-x-1/2 z-20 max-w-[250%] mix-blend-soft-light">
-            <Image src={gif} alt="GIF" class="w-7 h-auto" />
+          <div class="absolute lg:top-[48%] lg:right-[18%] lg:transform -translate-x-1/2 z-20 max-w-[250%] mix-blend-soft-light">
+            <Image src={gif} alt="GIF" class="w-8 h-auto" />
           </div>
         </div>
 
         <!-- Tekst -->
-        <div class="w-[41.66667%]">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+        <div class="w-[41.66667%] pt-14">
+          <h3 class="font-bold">Smag vores Nyhed!</h3>
+          <p class="w-2/3">Vores yngste medlem. En alkoholfri tørslukker med dybde og lækre toner af skovbær. Nyd den kold - skål</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- <section class="relative lg:w-full lg:min-h-screen flex flex-wrap overflow-hidden">
-    
-    <div class="absolute z-1 max-h-full overflow-hidden w-full">
-      <Image src={background1} alt="Baggrund" class="w-full h-full object-cover object-top" />
-    </div>
-
-   
-    <div class="relative z-20 flex w-full justify-center items-center">
-      <div class="container lg:container box-border w-full max-h-full mx-auto flex justify-center items-center flex-wrap">
-        <div class="sm:w-[41%] box-border">
-          <div class="">
-            <Image src={beerglass1} alt="øl" class="w-96" />
-          </div>
-          <div class="absolute lg:top-[46%] lg:left-[24%] lg:transform -translate-x-1/2 z-20 max-w-[250%] mix-blend-soft-light">
-            <Image src={gif} alt="GIF" class="w-7" />
-          </div>
-        </div>
-
-        <div class="w-[41.66667%]">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <section class="pt-28 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
     <div class="relative">
       <Image src={klat} alt="billede" class="w-3/5 pt-32 sm:w-3/5 lg:pt-10 m-auto lg:w-3/5" />
       <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-full">
-        <h2 class="text-blue-500 lg:text-large pt-22">DINE FORDELE</h2>
+        <h2 class="text-blue-500 lg:text-large pt-22 custom-pulse">DINE FORDELE</h2>
         <h2 class="text-blue-500">VED ET MALTCLUB ABONNEMENT</h2>
       </div>
     </div>
 
-    <div class="lg:grid lg:grid-cols-2 lg:grid-rows-2">
-      <div class="pt-28 pl-16">
+    <div class="grid grid-cols-[auto_auto] grid-rows-4 place-content-center">
+      <div class="pt-28 pl-16col-start-1 row-start-1 fotoinview">
         <Image src={info1} alt="billede" class="w-60" />
         <h3 class="text-xl font-bold text-blue-500 pt-4">BESTIL DIT MALTCLUB ØL ABONNMENT</h3>
         <p class="text-blue-500 w-96 pt-2">Vælg hvilket øl abonnement du ønsker at modtage. Få leveret et lækkert udvalg af kvalitetsøl fra danske og udenlandske bryggerier direkte hjem til dig eller din nærmeste pakkeshop.</p>
       </div>
 
-      <div class="pt-10 pl-16">
+      <div class="pt-10 pl-16 col-start-2 row-start-2 inview">
         <Image src={info2} alt="billede" class="w-60" />
         <h3 class="text-xl font-bold text-blue-500 pt-4">NYD DINE ØL I GODT SELVSKAB</h3>
         <p class="text-blue-500 w-96 pt-2">Inviter gode venner eller familie på besøg og byd på lækre specialøl. Med et MaltClub øl abonnement er du sikker på at kunne byde på gode øl til enhver lejlighed - med mindre du selvfølgelig har nået at drikke dine øl inden du får gæster på besøg.</p>
       </div>
 
-      <div class="pt-10 pl-16">
+      <div class="pt-10 pl-16 col-start-1 row-start-3 fotoinview">
         <Image src={info3} alt="billede" class="w-24" />
         <h3 class="text-xl font-bold text-blue-500 pt-4">UNIKKE OG SMAGSVÆKKENDE</h3>
         <p class="text-blue-500 w-96 pt-2">MaltClub giver dig en kulinarisk smagsoplevelse med et udvalg af unikke specialøl. Samtidig sparer du tid og får adgang til varianter, som du måske aldrig ville opdage i dit lokale supermarked.</p>
       </div>
 
-      <div class="pt-10 pl-16">
+      <div class="pt-10 pl-16 col-start-2 row-start-4 inview">
         <Image src={info4} alt="billede" class="w-36" />
         <h3 class="text-xl font-bold text-blue-500 pt-4">SPAR TID OG PENGE</h3>
         <p class="text-blue-500 w-96 pt-2">Hos MaltClub kombinerer vi smag og værdi, så du kan nyde unikke øl af høj kvalitet til billigere penge - uden at bruge tid på at lede efter dem.</p>
@@ -237,7 +211,20 @@ import gif from "../assets/images/bubbles.gif";
       transform: translateX(0) scale(1);
     }
   }
-
+  @keyframes pulseScale {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    40% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+  .custom-pulse {
+    animation: pulseScale 2s infinite;
+  }
   .beer-image {
     animation: slide-in 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   }
@@ -265,6 +252,9 @@ import gif from "../assets/images/bubbles.gif";
   .beer-image:nth-child(7) {
     animation-delay: 1.4s;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 </style>
 
 <script>
@@ -273,6 +263,10 @@ import gif from "../assets/images/bubbles.gif";
   inView(".fotoinview", () => {
     animate(".fotoinview", { x: [-2000, 0] }, { duration: 3 });
   });
+  inView(".inview", () => {
+    animate(".inview", { x: [2000, 0] }, { duration: 3 });
+  });
+
   animate("body", { opacity: [0, 1] }, { duration: 1 });
 
   import Splitting from "splitting";
