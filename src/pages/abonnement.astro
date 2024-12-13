@@ -8,7 +8,7 @@ import klat from "../assets/images/klat.svg";
 <MainLayout title="Maltclub">
   <section class="">
     <div class="relative">
-      <Image src={klat} alt="klat" class="w-3/5 pt-32 sm:w-3/5 lg:pt-6 m-auto lg:w-3/6" />
+      <Image src={klat} alt="klat" class="w-3/5 pt-8 sm:w-3/5 lg:pt-6 m-auto lg:w-3/6" />
       <div class="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-full">
         <h2 class="text-blue-500 lg:text-large pt-22 custom-pulse">DIN SMAGSREJSE STARTER HER</h2>
       </div>
@@ -18,21 +18,22 @@ import klat from "../assets/images/klat.svg";
       <p class="w-2/3 pt-10">Se de forskellige øl abonnementer vi tilbyder, og få håndplukkede specialøl leveret hver måned - nemt og bekvemt. <strong> Hver måned </strong> sørger vi for at overraske dig med <strong>nye og spændende øl</strong>, der udvider din smagshorisont - perfekt til at nyde alene eller dele med venner og familie. Nedenfor kan vores fire forskellige øl abonnementer ses - forhåbentligt til <strong>enhver smag</strong>.</p>
     </div>
 
-    <section class="flex justify-center gap-20 pt-20">
-      <div class="font-bold mt-sm">
+    <section class="lg:flex lg:justify-center lg:gap-20 pt-20">
+      <div class="font-bold mt-sm flex justify-center">
         <Card navn="LYS BOKS" pris="200 DKK" cardimage="/public/4_beer.svg" cardimagealt="øl" tekst="Indeholder 4 håndplukkede 75cl lyse specialøl  - perfekt til nye smagsoplevelser hver måned." />
       </div>
 
-      <div class="font-bold mt-sm">
+      <div class="font-bold mt-sm flex justify-center">
         <Card navn="MØRK BOKS" pris="200 DKK" cardimage="/public/4_beer.svg" cardimagealt="øl" tekst="Indeholder 4 håndplukkede 75cl specialøl  - Til dig, der elsker fyldige og mørke smagsnuancer." />
       </div>
     </section>
-    <section class="flex justify-center gap-20">
-      <div class="font-bold mt-sm">
+
+    <section class="lg:flex lg:justify-center gap-20">
+      <div class="flex justify-center font-bold mt-sm">
         <Card navn="A-FRI BOKS" pris="200 DKK" cardimage="/public/4_beer.svg" cardimagealt="øl" tekst="Indeholder 4 håndplukkede 75cl specialøl - Smagfuld oplevelse uden alkohol til alle lejligheder." />
       </div>
 
-      <div class="font-bold mt-sm">
+      <div class="font-bold mt-sm flex justify-center">
         <Card navn="MIX BOKS" pris="275 DKK" cardimage="/public/5_beer.svg" cardimagealt="øl" tekst="5 håndplukkede 75cl øl - lyse, mørke og alkoholfrie. Perfekt til deling eller selvforkælelse." />
       </div>
     </section>
