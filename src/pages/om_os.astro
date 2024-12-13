@@ -6,9 +6,12 @@ import beer_about from "../assets/images/beer_about.svg";
 import aboutUsImage from "./public/about_us.svg";
 import boks from "../assets/images/boks.png";
 import Link from "../components/Link.astro";
-import insta1 from "../assets/images/insta1.png";
-import insta2 from "../assets/images/insta2.png";
-import insta3 from "../assets/images/insta3.png";
+import insta1 from "../assets/images/insta1.svg";
+import insta2 from "../assets/images/insta2.svg";
+import insta3 from "../assets/images/insta3.svg";
+import insta4 from "../assets/images/insta4.svg";
+import insta5 from "../assets/images/insta5.svg";
+import insta6 from "../assets/images/insta6.svg";
 ---
 
 <MainLayout title="Maltclub">
@@ -44,13 +47,18 @@ import insta3 from "../assets/images/insta3.png";
 
     <section class="px-4 pt-10 pb-10 sm:px-4 md:px-6 md:h-auto lg:px-2 max-w-screen-xl mx-auto lg:h-screen">
       <div class="flex justify-center flex-col items-center pb-8">
-        <h3>FØLG OS PÅ INSTAGRAM</h3>
-        <Link>@maltclub.dk</Link>
+        <h3 class="font-bold">FØLG OS PÅ INSTAGRAM</h3>
+        <Link> <a href="https://www.instagram.com/maltclub.dk/">@maltclub.dk</a></Link>
       </div>
       <div class="w-32 md:w-56 gap-7 flex justify-center mx-auto lg:gap-16 lg:w-72">
         <Image src={insta1} alt="" class="" />
         <Image src={insta2} alt="" class="" />
         <Image src={insta3} alt="" class="" />
+      </div>
+      <div class="w-32 md:w-56 gap-7 flex pt-4 justify-center mx-auto lg:gap-16 lg:w-72">
+        <Image src={insta4} alt="" class="" />
+        <Image src={insta5} alt="" class="" />
+        <Image src={insta6} alt="" class="" />
       </div>
     </section>
   </article>
