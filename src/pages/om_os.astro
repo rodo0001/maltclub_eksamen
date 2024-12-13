@@ -29,7 +29,7 @@ import insta6 from "../assets/images/insta6.svg";
   </section>
 
   <div class="bg-rosa-500" id="omos">
-    <section class="px-4 lg:h-screen lg:flex lg:place-items-center lg:justify-center">
+    <section class="px-4 lg:h-screen lg:flex lg:place-items-center lg:justify-center fotoinview">
       <div class="md:grid md:grid-cols-[auto_auto] md:place-content-center md:max-w-screen-lg md:px-6 md:gap-10 md:w-full md:h-screen lg:grid lg:grid-cols-[auto_auto] lg:place-content-center lg:max-w-screen-xl lg:gap-20 lg:w-full">
         <div class="w-40 md:w-60 tpt-10 lg:w-96">
           <Image src={beer_about} alt="Billede af øl" />
@@ -61,6 +61,14 @@ import insta6 from "../assets/images/insta6.svg";
     </section>
   </div>
 </MainLayout>
+
+<script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+  inView(".fotoinview", () => {
+    animate(".fotoinview", { x: [-2000, 0] }, { duration: 3 });
+  });
+  animate("body", { opacity: [0, 1] }, { duration: 1 });
+</script>
 
 <!-- <div class="relative z-10 top-[-11rem] right-[7rem]">
   <Image src={aboutUsImage} alt="billede" class="" />
