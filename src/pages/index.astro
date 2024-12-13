@@ -26,7 +26,7 @@ import gif from "../assets/images/bubbles.gif";
 
 <MainLayout title="Maltclub">
   <section class="relative">
-    <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge">MALTCLUB</h1>
+    <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge" id="herotitle">MALTCLUB</h1>
     <h3 class="flex justify-center text-blue-500 text-sm font-bold lg:pt-4 lg:text-xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
 
     <div class="relative z-20 flex justify-center px-4 sm:px-4 md:px-6 lg:pt-7 lg:px-2 mx-auto">
@@ -120,8 +120,8 @@ import gif from "../assets/images/bubbles.gif";
       </div>
 
       <div class="flex justify-center gap-10 pt-10">
-        <Button variant="primary" size="medium" href="/your-link"> KØB ABONNEMENT </Button>
-        <Button variant="secondary" size="medium" href="/your-link"> OPSIG ABONNEMENT </Button>
+        <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
+        <Button variant="secondary" size="medium" href="/your-link">OPSIG ABONNEMENT</Button>
       </div>
     </div>
   </section>
@@ -142,7 +142,7 @@ import gif from "../assets/images/bubbles.gif";
       </div>
 
       <div class="lg:flex lg:justify-center pt-6">
-        <Button variant="primary" size="medium" href="/your-link"> KØB ABONNEMENT </Button>
+        <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
       </div>
     </div>
   </section>
@@ -153,7 +153,7 @@ import gif from "../assets/images/bubbles.gif";
 
     <form class="flex flex-col items-center space-y-4 w-full max-w-sm mx-auto pt-4">
       <input type="email" placeholder="Indtast din e-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required />
-      <Button variant="secondary" size="medium" href="/your-link"> TILMELD </Button>
+      <Button variant="secondary" size="medium" href="/your-link">TILMELD</Button>
     </form>
   </section>
 
@@ -225,9 +225,10 @@ import gif from "../assets/images/bubbles.gif";
   import Splitting from "splitting";
   import "splitting/dist/splitting.css"; // Importer Splitting.js CSS
   import gsap from "gsap";
+
   document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("overlay");
-    const herotitle = document.getElementById("herotitle").querySelector("h2");
+    const herotitle = document.getElementById("herotitle").querySelector("h1");
 
     if (herotitle) {
       const result = Splitting({ target: herotitle, by: "chars" });
