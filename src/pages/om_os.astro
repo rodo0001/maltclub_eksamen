@@ -15,22 +15,20 @@ import insta6 from "../assets/images/insta6.svg";
 ---
 
 <MainLayout title="Maltclub">
-  <article>
-    <section class="relative bg-cover lg:h-screen lg:top-[-4rem] lg:right-[7rem]" style="background-image: url('/about_us.png'); z-0">
-      <div class="absolute inset-0 z-10 flex items-center justify-center lg:pb-80">
-        <div class="text-white space-y-4">
-          <h1 class="text-5xl text-blue-500">MALTCLUB</h1>
-          <h2 class="text-8xl text-blue-500">HVEM ER VI?</h2>
-          <p class="text-blue-500 lg:w-2/3">Uanset om du er nybegynder eller ølentusiast, sørger Maltclub for at overraske og forkæle dine smagsløg.</p>
-          <div class="relative z-20 lg:pt-7">
-            <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
-          </div>
+  <section class="relative bg-cover lg:h-screen lg:top-[-4.5rem] lg:right-[7rem]" style="background-image: url('/about_us.png'); z-0">
+    <div class="absolute inset-0 z-10 flex items-center justify-center lg:pb-80">
+      <div class="text-white space-y-4">
+        <h1 class="text-5xl text-blue-500">MALTCLUB</h1>
+        <h2 class="text-8xl text-blue-500">HVEM ER VI?</h2>
+        <p class="text-blue-500 lg:w-2/3">Uanset om du er nybegynder eller ølentusiast, sørger Maltclub for at overraske og forkæle dine smagsløg.</p>
+        <div class="relative z-20 lg:pt-7">
+          <Button variant="primary" size="medium" href="#omos">LÆS MERE</Button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="absolute lg:top-[101vh] w-full lg:h-[210vh] bg-rosa-500 z-[-1]"></div>
-
+  <div class="bg-rosa-500" id="omos">
     <section class="px-4 lg:h-screen lg:flex lg:place-items-center lg:justify-center">
       <div class="md:grid md:grid-cols-[auto_auto] md:place-content-center md:max-w-screen-lg md:px-6 md:gap-10 md:w-full md:h-screen lg:grid lg:grid-cols-[auto_auto] lg:place-content-center lg:max-w-screen-xl lg:gap-20 lg:w-full">
         <div class="w-40 md:w-60 tpt-10 lg:w-96">
@@ -45,23 +43,23 @@ import insta6 from "../assets/images/insta6.svg";
       </div>
     </section>
 
-    <section class="px-4 pt-10 pb-10 sm:px-4 md:px-6 md:h-auto lg:px-2 max-w-screen-xl mx-auto lg:h-screen">
+    <section class="px-4 pt-10 pb-28 sm:px-4 md:px-6 md:h-auto lg:pb-28 max-w-screen-xl mx-auto">
       <div class="flex justify-center flex-col items-center pb-8">
         <h3 class="font-bold">FØLG OS PÅ INSTAGRAM</h3>
-        <Link> <a href="https://www.instagram.com/maltclub.dk/">@maltclub.dk</a></Link>
+        <Link><a class="hover:text-orange-500" href="https://www.instagram.com/maltclub.dk/">@maltclub.dk </a></Link>
       </div>
-      <div class="w-32 md:w-56 gap-7 flex justify-center mx-auto lg:gap-16 lg:w-72">
+      <div class="w-32 md:w-56 gap-7 flex justify-center mx-auto lg:gap-8 lg:w-72">
         <Image src={insta1} alt="" class="" />
         <Image src={insta2} alt="" class="" />
         <Image src={insta3} alt="" class="" />
       </div>
-      <div class="w-32 md:w-56 gap-7 flex pt-4 justify-center mx-auto lg:gap-16 lg:w-72">
+      <div class="w-32 md:w-56 gap-7 flex pt-8 justify-center mx-auto lg:gap-8 lg:w-72">
         <Image src={insta4} alt="" class="" />
         <Image src={insta5} alt="" class="" />
         <Image src={insta6} alt="" class="" />
       </div>
     </section>
-  </article>
+  </div>
 </MainLayout>
 
 <!-- <div class="relative z-10 top-[-11rem] right-[7rem]">
