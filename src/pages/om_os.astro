@@ -1,0 +1,62 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import beer_about from "../assets/images/beer_about.svg";
+import aboutUsImage from "./public/about_us.svg";
+import boks from "../assets/images/boks.png";
+import Link from "../components/Link.astro";
+import insta1 from "../assets/images/insta1.png";
+import insta2 from "../assets/images/insta2.png";
+import insta3 from "../assets/images/insta3.png";
+---
+
+<MainLayout title="Maltclub">
+  <article>
+    <section class="relative bg-cover lg:h-screen lg:top-[-4rem] lg:right-[7rem]" style="background-image: url('/about_us.png'); z-0">
+      <div class="absolute inset-0 z-10 flex items-center justify-center lg:pb-80">
+        <div class="text-white space-y-4">
+          <h1 class="text-5xl text-blue-500">MALTCLUB</h1>
+          <h2 class="text-8xl text-blue-500">HVEM ER VI?</h2>
+          <p class="text-blue-500 lg:w-2/3">Uanset om du er nybegynder eller ølentusiast, sørger Maltclub for at overraske og forkæle dine smagsløg.</p>
+          <div class="relative z-20 lg:pt-7">
+            <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="absolute lg:top-[101vh] w-full lg:h-[210vh] bg-rosa-500 z-[-1]"></div>
+
+    <section class="px-4 lg:h-screen lg:flex lg:place-items-center lg:justify-center">
+      <div class="md:grid md:grid-cols-[auto_auto] md:place-content-center md:max-w-screen-lg md:px-6 md:gap-10 md:w-full md:h-screen lg:grid lg:grid-cols-[auto_auto] lg:place-content-center lg:max-w-screen-xl lg:gap-20 lg:w-full">
+        <div class="w-40 md:w-60 tpt-10 lg:w-96">
+          <Image src={beer_about} alt="Billede af øl" />
+        </div>
+
+        <div class="pt-10 max-w-s text-blue-500 space-y-4 lg:max-w-lg lg:mx-auto">
+          <h2 class="text-3xl font-bold text-blue-500">MALTCLUB</h2>
+          <p>Hos MaltClub er vi på en mission. Vi vil udbrede kendskabet til god øl fra bryghuse med noget på hjertet. Vi elsker at fortælle den gode historie om både øl og bryghuse fra ind- og udland og er overbeviste om, at dette kan være med til at pirre dine smagsløg. Øl med en god historie smager bedre.</p>
+          <p>Vi sammensætter hver måned en kasse med forskellige typer øl og håber på den måde at kunne medvirke til at udvide din horisont omkring øl. Hver øl akkompagneres med en inspirerende beskrivelse af bryghuset og historien bag den udvalgte øl. Vi glæder os til at levere din næste MaltClub ølpakke!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 pt-10 pb-10 sm:px-4 md:px-6 md:h-auto lg:px-2 max-w-screen-xl mx-auto lg:h-screen">
+      <div class="flex justify-center flex-col items-center pb-8">
+        <h3>FØLG OS PÅ INSTAGRAM</h3>
+        <Link>@maltclub.dk</Link>
+      </div>
+      <div class="w-32 md:w-56 gap-7 flex justify-center mx-auto lg:gap-16 lg:w-72">
+        <Image src={insta1} alt="" class="" />
+        <Image src={insta2} alt="" class="" />
+        <Image src={insta3} alt="" class="" />
+      </div>
+    </section>
+  </article>
+</MainLayout>
+
+<!-- <div class="relative z-10 top-[-11rem] right-[7rem]">
+  <Image src={aboutUsImage} alt="billede" class="" />
+</div>
+<h1>MALTCLUB</h1> -->

@@ -26,15 +26,15 @@ import logo from "../assets/images/logo.png";
 
 <div x-data="{ showmenu: false }" class="lg:static">
   <div id="navbar" class="flex flex-row justify-between px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto pt-6">
-    <div id="logo" class="hover:opacity-75 w-12 max-w-full">
+    <div id="logo" class="relative z-20 hover:opacity-75 w-12 max-w-full">
       <a href="/">
         <Image src={logo} alt="billede" />
       </a>
     </div>
     <nav id="desktopmenu" class="hidden font-display lg:flex flex-1 justify-end text-lg">
       <ul class="flex flex-row gap-8 pr-8">
-        <li class="hover:opacity-50 text-blue-500"><a href="#">VORES ABONNEMENTER</a></li>
-        <li class="hover:opacity-50 text-blue-500"><a href="#">OM OS</a></li>
+        <li class="hover:opacity-50 text-blue-500"><a href="/abonnement">VORES ABONNEMENTER</a></li>
+        <li class="hover:opacity-50 text-blue-500"><a href="/om_os">OM OS</a></li>
       </ul>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -59,8 +59,8 @@ import logo from "../assets/images/logo.png";
 
   <nav id="mobilmenu" class="fixed right-0 w-full flex flex-col items-center pb-4 pt-4 bg-white lg:hidden" x-show="showmenu" x-transition x-cloak>
     <ul class="text-center text-blue-500 space-y-4">
-      <li class="hover:opacity-75"><a href="registrer">VORES ABONNEMENTER</a></li>
-      <li class="hover:opacity-75"><a href="ressourcer">OM OS</a></li>
+      <li class="hover:opacity-75"><a href="/abonnement">VORES ABONNEMENTER</a></li>
+      <li class="hover:opacity-75"><a href="/om_os">OM OS</a></li>
     </ul>
     <div class="pt-4">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
