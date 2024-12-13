@@ -17,7 +17,7 @@ import insta6 from "../assets/images/insta6.svg";
 <MainLayout title="Maltclub">
   <section class="pb-20 lg:relative lg:bg-cover lg:h-screen lg:top-[-4.5rem]" style="background-image: url('/about_us.svg');  z-0">
     <div class="lg:absolute inset-0 z-10 lg:flex lg:items-center lg:justify-center">
-      <div class="text-white space-y-4 lg:pb-28">
+      <div class="text-white space-y-4 lg:pb-28 inview">
         <h1 class="lg:text-5xl text-medium text-blue-500 px-4 pt-4">MALTCLUB</h1>
         <h2 class="lg:text-8xl text-blue-500 text-medium px-4">HVEM ER VI?</h2>
         <p class="text-blue-500 lg:w-2/3 px-4">Uanset om du er nybegynder eller ølentusiast, sørger Maltclub for at overraske og forkæle dine smagsløg.</p>
@@ -65,8 +65,13 @@ import insta6 from "../assets/images/insta6.svg";
 <script>
   import { animate, stagger, inView, scroll, timeline } from "motion";
   inView(".fotoinview", () => {
-    animate(".fotoinview", { x: [-2000, 0] }, { duration: 3 });
+    animate(".fotoinview", { x: [2000, 0] }, { duration: 4 });
   });
+
+  inView(".inview", () => {
+    animate(".inview", { y: [-2000, 0] }, { duration: 3 });
+  });
+
   animate("body", { opacity: [0, 1] }, { duration: 1 });
 </script>
 
