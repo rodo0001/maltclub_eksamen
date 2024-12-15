@@ -24,11 +24,12 @@ import klat from "../assets/images/klat.svg";
 import gif from "../assets/images/bubbles.gif";
 import bg from "../assets/images/bg.svg";
 import bg2 from "../assets/images/bg2.svg";
+import bg3 from "../assets/images/bg3.svg";
 ---
 
 <MainLayout title="Maltclub">
   <section class="relative">
-    <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge" id="herotitle">MALTCLUB</h1>
+    <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge inview2">MALTCLUB</h1>
     <h3 class="flex justify-center text-blue-500 text-sm font-bold lg:pt-4 lg:text-xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
 
     <div class="relative z-20 flex justify-center px-4 sm:px-4 md:px-6 lg:pt-7 lg:px-2 mx-auto">
@@ -42,7 +43,7 @@ import bg2 from "../assets/images/bg2.svg";
     </div>
 
     <div class="relative z-20 flex justify-center pt-6">
-      <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
+      <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
     </div>
 
     <div class="absolute inset-0 py-20 lg:py-56 bg-rosa-500 top-36 lg:top-72 z-10"></div>
@@ -56,7 +57,7 @@ import bg2 from "../assets/images/bg2.svg";
         <p class="text-blue-500 pt-7">Vælg et øl abonnement, der passer til dig, og oplev nye håndplukkede specialøl, som du ikke finder andre steder kun et klik væk.</p>
         <p class="text-blue-500 pb-10 pt-4">Find din favorit i dag og gør hver måned til noget særligt!</p>
         <div class="pb-9">
-          <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
+          <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
         </div>
       </div>
 
@@ -73,7 +74,7 @@ import bg2 from "../assets/images/bg2.svg";
     </div>
 
     <!-- Vores billeder og tekst -->
-    <div class="relative z-20 flex w-full items-end">
+    <div class="relative z-20 flex w-full items-end px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
       <div class="container lg:container box-border w-full h-[80vh] mx-auto flex justify-center items-center flex-wrap">
         <!-- Billede og GIF -->
         <div class="sm:w-[41%] box-border relative pl-10">
@@ -86,7 +87,7 @@ import bg2 from "../assets/images/bg2.svg";
         </div>
 
         <!-- Tekst -->
-        <div class="w-[41.66667%] pt-14">
+        <div class="w-[41%] pt-14">
           <h3 class="font-bold">Smag vores Nyhed!</h3>
           <p class="w-2/3">Vores yngste medlem. En alkoholfri tørslukker med dybde og lækre toner af skovbær. Nyd den kold - skål</p>
         </div>
@@ -132,33 +133,53 @@ import bg2 from "../assets/images/bg2.svg";
 
   <section class="pt-36">
     <div class="bg-rosa-500 py-32">
-      <div class="lg:flex lg:justify-center gap-10">
-        <h3 class="text-4xl font-bold pl-4 lg:pl-64 text-blue-500">FLEKSIBILITET PÅ <br />DINE PRÆMISSER</h3>
-        <p class="pl-4 pt-5 lg:pt-0 lg:w-2/6 lg:pl-0 pb-4 text-blue-500">Hos Maltclub gør vi det nemt for dig. Opret dit abonnement på få minutter, og nyd dine specialøl uden bekymringer. Har du brug for en pause? Opsig dit abonnement lige så nemt, som du oprettede det - helt uden bøvl.</p>
-      </div>
+      <!-- Container -->
+      <div class="max-w-screen-lg mx-auto flex flex-col items-center gap-10 px-4">
+        <!-- Tekst (i række) -->
+        <div class="flex flex-col lg:flex-row justify-center items-center lg:items-start text-center lg:text-left gap-10">
+          <h3 class="text-4xl font-bold text-blue-500">
+            FLEKSIBILITET PÅ <br /> DINE PRÆMISSER
+          </h3>
+          <p class="lg:w-2/5 text-blue-500">Hos Maltclub gør vi det nemt for dig. Opret dit abonnement på få minutter, og nyd dine specialøl uden bekymringer. Har du brug for en pause? Opsig dit abonnement lige så nemt, som du oprettede det - helt uden bøvl.</p>
+        </div>
 
-      <div class="flex justify-center gap-10 pt-10">
-        <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
-        <Button variant="secondary" size="medium" href="/your-link">OPSIG ABONNEMENT</Button>
-      </div>
-    </div>
-  </section>
-
-  <section class="relative lg:w-full lg:min-h-screen">
-    <div>
-      <Image src={background2} alt="Baggrund" class="absolute inset-0 z-0" />
-
-      <div class="absolute lg:top-[20rem] lg:left-[19rem] lg:transform -translate-x-1/2 z-20">
-        <Image src={gif} alt="GIF" class="w-7" />
-      </div>
-      <div class="w-3/4 grid place-content-center relative z-20">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae dignissimos voluptates!</p>
+        <!-- Knapper -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
+          <Button variant="secondary" size="medium" href="/your-link">OPSIG ABONNEMENT</Button>
+        </div>
       </div>
     </div>
   </section>
 
+  <section class="relative w-full min-h-full md:min-h-screen flex flex-wrap overflow-hidden">
+    <!-- Baggrund -->
+    <div class="absolute z-1 inset-0 object-cover">
+      <Image src={bg3} alt="Baggrund" class="w-full h-full object-cover object-left" />
+    </div>
+
+    <!-- Indhold -->
+    <div class="relative z-20 flex w-full lg:items-end px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
+      <div class="container box-border flex-col items-center md:w-full md:h-[80vh] mx-auto flex lg:justify-center lg:items-center lg:flex-wrap">
+        <!-- Billede og GIF -->
+        <div class="w-[41%] box-border relative md:pl-10">
+          <!-- Beerglass -->
+          <div class="relative flex lg:place-content-end pt-8">
+            <Image src={beerglass2} alt="øl" class="w-36 lg:w-96 h-auto" />
+            <div class="absolute right-[25%] top-[69%] sm:top-[50%] sm:right-[10%] md:top-[60%] lg:top-[65%] lg:right-[19%] transform -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-soft-light">
+              <Image src={gif} alt="GIF" class="w-3 sm:w-5 md:w-6 lg:w-8 h-auto" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Tekst -->
+        <div class="flex flex-col mx-auto text-left items-start md:pt-14 lg:w-[41%]">
+          <h3 class="font-bold">GOLDEN TASTE</h3>
+          <p class="w-full">Golden Taste er en perfekt afbalanceret øl, der kombinerer gyldne maltnoter med en frisk, frugtagtig aroma. En elegant smagsoplevelse, der forkæler dine sanser ved hver tår.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="pt-48">
     <Image src={car} alt="Baggrund" class="w-52 pt-36 lg:w-auto fotoinview" />
 
@@ -169,7 +190,7 @@ import bg2 from "../assets/images/bg2.svg";
       </div>
 
       <div class="lg:flex lg:justify-center pt-6">
-        <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
+        <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
       </div>
     </div>
   </section>
@@ -261,48 +282,14 @@ import bg2 from "../assets/images/bg2.svg";
   /* Import af Motion One biblioteket */
   import { animate, stagger, inView, scroll, timeline } from "motion";
   inView(".fotoinview", () => {
-    animate(".fotoinview", { x: [-2000, 0] }, { duration: 3 });
+    animate(".fotoinview", { x: [-2000, 0] }, { duration: 2 });
   });
   inView(".inview", () => {
     animate(".inview", { x: [2000, 0] }, { duration: 3 });
   });
+  inView(".inview2", () => {
+    animate(".inview2", { y: [-2000, 0] }, { duration: 3 });
+  });
 
   animate("body", { opacity: [0, 1] }, { duration: 1 });
-
-  import Splitting from "splitting";
-  import "splitting/dist/splitting.css"; // Importer Splitting.js CSS
-  import gsap from "gsap";
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const overlay = document.getElementById("overlay");
-    const herotitle = document.getElementById("herotitle").querySelector("h1");
-
-    if (herotitle) {
-      const result = Splitting({ target: herotitle, by: "chars" });
-
-      const chars = result[0].chars;
-
-      const tl = gsap.timeline();
-
-      tl.to(overlay, {
-        duration: 1,
-        scaleY: 0,
-        transformOrigin: "top",
-        ease: "power2.inOut",
-      });
-
-      tl.from(
-        chars,
-        {
-          opacity: 0,
-          y: 80,
-          rotateX: -90,
-          stagger: 0.05,
-          duration: 1,
-          ease: "back.out(1.7)",
-        },
-        "-=0.5"
-      );
-    }
-  });
 </script>
