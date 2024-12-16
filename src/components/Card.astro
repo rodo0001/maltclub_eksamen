@@ -1,22 +1,9 @@
 ---
-const { cardimage = "", cardimagealt = "", navn = "", pris = "", tekst = "", badgefaapladser = "" } = Astro.props;
+const { cardimage = "", cardimagealt = "", navn = "", pris = "", tekst = "", badgefaapladser = "", stjerner = "" } = Astro.props;
 import Button from "../components/Button.astro";
 ---
 
-<article class="relative rounded cursor-pointer overflow-hidden w-[420px] h-[520px] shadow-drop50 mb-32">
-  <!-- Badge -->
-  <!-- {
-    badgefaapladser === "true" && (
-      <div class="absolute z-20 top-2 right-2 inline-flex items-center rounded bg-orange-200 px-2 py-1 text-xs font-medium text-orange-700 ring-1 ring-inset ring-orange-600/10 ">
-        <img src="fire.png" alt="icon" class="pr-1" />
-        Få pladser tilbage
-      </div>
-    )
-  } -->
-
-  <!-- Billedet -->
-
-  <!-- Baggrundsfarve og tekst -->
+<article class="relative rounded cursor-pointer overflow-hidden w-[420px] h-[550px] shadow-drop50 mb-32">
   <div class="absolute inset-0 bg-rosa-500 transform transition duration-400 ease-in-out hover:scale-105">
     <div class="text-center">
       <h3 class="text-medium pt-6 font-semibold text-blue-500">{navn}</h3>
@@ -29,7 +16,15 @@ import Button from "../components/Button.astro";
       <img src={cardimage} alt={cardimagealt} class="w-72" />
     </div>
     <div class="flex justify-center">
-      <p class="text-sm text-center text-blue-500 w-72">{tekst}</p>
+      <p class="text-sm text-center font-normal text-blue-500 w-96">{tekst}</p>
+    </div>
+    <!-- Denne del tilføjer teksten med separator og stjerner -->
+    <div class="flex justify-center text-small text-grey-900 mt-4 font-light">
+      <p class="pr-1">Fri fragt inkluderet</p>
+      <span class="px-1">|</span>
+      <p class="pr-1">Månedligt abonnement</p>
+      <span class="px-1">|</span>
+      <p>Trustpilot <span class="">⭐⭐⭐</span></p>
     </div>
 
     <div class="flex justify-center pt-4">
