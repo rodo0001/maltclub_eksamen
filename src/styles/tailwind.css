@@ -11,4 +11,26 @@
   h2 {
     font-family: koulen;
   }
+
+  /* CSS for initial state */
+  /* CSS for initial position */
+  /* CSS for the initial state of both the section and the image */
+  #bestseller {
+    transform: rotate(-15deg);
+  }
+
+  #fotobes {
+    transform: rotate(-15deg);
+  }
+
+  /* CSS for the final animation state */
+  #bestseller.animate {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  #fotobes.animate {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 }
