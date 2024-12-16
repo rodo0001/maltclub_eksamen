@@ -13,7 +13,7 @@ import bobble from "../assets/images/bobble_maltclub.png";
 import boks from "../assets/images/boks.svg";
 import beerglass1 from "../assets/images/beer_glass1.svg";
 import beerglass2 from "../assets/images/beer_glass2.svg";
-import background1 from "../assets/images/background_image1.svg";
+import background_image1 from "../assets/images/background_image1.svg";
 import background2 from "../assets/images/background_image2.svg";
 import info1 from "../assets/images/info1.svg";
 import info2 from "../assets/images/info2.svg";
@@ -22,11 +22,14 @@ import info4 from "../assets/images/info4.svg";
 import car from "../assets/images/beer_car.png";
 import klat from "../assets/images/klat.svg";
 import gif from "../assets/images/bubbles.gif";
+import bg from "../assets/images/bg.svg";
+import bg2 from "../assets/images/bg2.svg";
+import bg3 from "../assets/images/bg3.svg";
 ---
 
 <MainLayout title="Maltclub">
   <section class="relative">
-    <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge">MALTCLUB</h1>
+    <h1 class="flex justify-center text-blue-500 text-large lg:text-xlarge inview2">MALTCLUB</h1>
     <h3 class="flex justify-center text-blue-500 text-sm font-bold lg:pt-4 lg:text-xl">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
 
     <div class="relative z-20 flex justify-center px-4 sm:px-4 md:px-6 lg:pt-7 lg:px-2 mx-auto">
@@ -40,7 +43,7 @@ import gif from "../assets/images/bubbles.gif";
     </div>
 
     <div class="relative z-20 flex justify-center pt-6">
-      <Button variant="primary" size="medium" href="/your-link">KØB ABONNEMENT</Button>
+      <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
     </div>
 
     <div class="absolute inset-0 py-20 lg:py-56 bg-rosa-500 top-36 lg:top-72 z-10"></div>
@@ -54,25 +57,42 @@ import gif from "../assets/images/bubbles.gif";
         <p class="text-blue-500 pt-7">Vælg et øl abonnement, der passer til dig, og oplev nye håndplukkede specialøl, som du ikke finder andre steder kun et klik væk.</p>
         <p class="text-blue-500 pb-10 pt-4">Find din favorit i dag og gør hver måned til noget særligt!</p>
         <div class="pb-9">
-          <Button variant="primary" size="medium" href="/">KØB ABONNEMENT</Button>
+          <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
         </div>
       </div>
 
       <div class="bg-rosa-500 w-96 h-80 lg:pt-4 rounded flex justify-center items-center">
-        <Image src={boks} alt="billede" class="w-80 transform transition duration-300 ease-in-out hover:scale-150" />
+        <a href="/abonnement"> <Image src={boks} alt="billede" class="w-80 custom-pulse" /></a>
       </div>
     </div>
   </section>
 
-  <section class="relative lg:w-full lg:min-h-screen">
-    <!-- Baggrundsbillede -->
-    <div class="absolute inset-0 z-10">
-      <Image src={background1} alt="Baggrund" class="w-full h-full object-cover" />
+  <section class="relative min-h-full md:min-h-screen flex flex-wrap overflow-hidden">
+    <!-- Baggrund -->
+    <div class="absolute z-1 inset-0 object-cover">
+      <Image src={bg2} alt="Baggrund" class="w-full h-full object-cover object-center" />
     </div>
 
-    <!-- GIF Billede -->
-    <div class="absolute inset-0 top-96 left-2/4 z-20">
-      <Image src={gif} alt="GIF" class="w-7" />
+    <!-- Indhold -->
+    <div class="relative z-20 flex w-full md:items-end px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
+      <div class="container box-border items-center md:w-full md:h-[80vh] mx-auto flex justify-center lg:items-center md:flex-wrap">
+        <!-- Billede og GIF -->
+        <div class="w-[41%] box-border relative md:pl-10">
+          <!-- Beerglass -->
+          <div class="relative flex place-content-end pt-8">
+            <Image src={beerglass1} alt="øl" class="w-56 md:w-96 h-auto md:pl-10" />
+            <div class="absolute right-[21%] top-[69%] sm:top-[66%] sm:right-[20%] md:top-[69%] md:right-[19%] lg:top-[64%] lg:right-[18%] transform -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-soft-light">
+              <Image src={gif} alt="GIF" class="w-6 sm:w-6 md:w-7 lg:w-8 h-auto" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Tekst -->
+        <div class="w-[41%] pt-28 md:pt-14">
+          <h3 class="font-bold">Smag vores Nyhed!</h3>
+          <p class="md:w-2/3">Vores yngste medlem. En alkoholfri tørslukker med dybde og lækre toner af skovbær. Nyd den kold - skål!</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -80,31 +100,31 @@ import gif from "../assets/images/bubbles.gif";
     <div class="relative">
       <Image src={klat} alt="billede" class="w-3/5 pt-32 sm:w-3/5 lg:pt-10 m-auto lg:w-3/5" />
       <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-full">
-        <h2 class="text-blue-500 lg:text-large pt-22">DINE FORDELE</h2>
+        <h2 class="text-blue-500 lg:text-large pt-22 custom-pulse">DINE FORDELE</h2>
         <h2 class="text-blue-500">VED ET MALTCLUB ABONNEMENT</h2>
       </div>
     </div>
 
-    <div class="lg:grid lg:grid-cols-2 lg:grid-rows-2">
-      <div class="pt-28 pl-16">
+    <div class="mx-auto max-w-sm place-content-center md:grid md:grid-cols-[auto_auto] md:grid-rows-4">
+      <div class="pt-28 md:pl-16 md:col-start-1 md:row-start-1 fotoinview">
         <Image src={info1} alt="billede" class="w-60" />
         <h3 class="text-xl font-bold text-blue-500 pt-4">BESTIL DIT MALTCLUB ØL ABONNMENT</h3>
         <p class="text-blue-500 w-96 pt-2">Vælg hvilket øl abonnement du ønsker at modtage. Få leveret et lækkert udvalg af kvalitetsøl fra danske og udenlandske bryggerier direkte hjem til dig eller din nærmeste pakkeshop.</p>
       </div>
 
-      <div class="pt-10 pl-16">
+      <div class="pt-10 md:pl-16 md:col-start-2 md:row-start-2 inview">
         <Image src={info2} alt="billede" class="w-60" />
         <h3 class="text-xl font-bold text-blue-500 pt-4">NYD DINE ØL I GODT SELVSKAB</h3>
         <p class="text-blue-500 w-96 pt-2">Inviter gode venner eller familie på besøg og byd på lækre specialøl. Med et MaltClub øl abonnement er du sikker på at kunne byde på gode øl til enhver lejlighed - med mindre du selvfølgelig har nået at drikke dine øl inden du får gæster på besøg.</p>
       </div>
 
-      <div class="pt-10 pl-16">
+      <div class="pt-10 md:pl-16 md:col-start-1 md:row-start-3 fotoinview3">
         <Image src={info3} alt="billede" class="w-24" />
         <h3 class="text-xl font-bold text-blue-500 pt-4">UNIKKE OG SMAGSVÆKKENDE</h3>
         <p class="text-blue-500 w-96 pt-2">MaltClub giver dig en kulinarisk smagsoplevelse med et udvalg af unikke specialøl. Samtidig sparer du tid og får adgang til varianter, som du måske aldrig ville opdage i dit lokale supermarked.</p>
       </div>
 
-      <div class="pt-10 pl-16">
+      <div class="pt-10 md:pl-16 md:col-start-2 md:row-start-4 inview4">
         <Image src={info4} alt="billede" class="w-36" />
         <h3 class="text-xl font-bold text-blue-500 pt-4">SPAR TID OG PENGE</h3>
         <p class="text-blue-500 w-96 pt-2">Hos MaltClub kombinerer vi smag og værdi, så du kan nyde unikke øl af høj kvalitet til billigere penge - uden at bruge tid på at lede efter dem.</p>
@@ -114,26 +134,56 @@ import gif from "../assets/images/bubbles.gif";
 
   <section class="pt-36">
     <div class="bg-rosa-500 py-32">
-      <div class="lg:flex lg:justify-center gap-10">
-        <h3 class="text-4xl font-bold pl-4 lg:pl-64 text-blue-500">FLEKSIBILITET PÅ <br />DINE PRÆMISSER</h3>
-        <p class="pl-4 pt-5 lg:pt-0 lg:w-2/6 lg:pl-0 pb-4 text-blue-500">Hos Maltclub gør vi det nemt for dig. Opret dit abonnement på få minutter, og nyd dine specialøl uden bekymringer. Har du brug for en pause? Opsig dit abonnement lige så nemt, som du oprettede det - helt uden bøvl.</p>
-      </div>
+      <!-- Container -->
+      <div class="max-w-screen-lg mx-auto flex flex-col items-center gap-10 px-4">
+        <!-- Tekst (i række) -->
+        <div class="flex flex-col lg:flex-row justify-center items-center lg:items-start text-center lg:text-left gap-10">
+          <h3 class="text-4xl font-bold text-blue-500">
+            FLEKSIBILITET PÅ <br /> DINE PRÆMISSER
+          </h3>
+          <p class="lg:w-2/5 text-blue-500">Hos Maltclub gør vi det nemt for dig. Opret dit abonnement på få minutter, og nyd dine specialøl uden bekymringer. Har du brug for en pause? Opsig dit abonnement lige så nemt, som du oprettede det - helt uden bøvl.</p>
+        </div>
 
-      <div class="flex justify-center gap-10 pt-10">
-        <Button variant="primary" size="medium" href="/your-link"> KØB ABONNEMENT </Button>
-        <Button variant="secondary" size="medium" href="/your-link"> OPSIG ABONNEMENT </Button>
+        <!-- Knapper -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
+          <Button variant="secondary" size="medium" href="/your-link">OPSIG ABONNEMENT</Button>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="relative lg:w-full lg:min-h-screen">
-    <div class="absolute inset-0 z-10">
-      <Image src={background2} alt="Baggrund" class="" />
+  <section class="relative min-h-full md:min-h-screen flex flex-wrap overflow-hidden">
+    <!-- Baggrund -->
+    <div class="absolute z-1 inset-0 object-cover">
+      <Image src={bg3} alt="Baggrund" class="w-full h-full object-cover object-center" />
+    </div>
+
+    <!-- Indhold -->
+    <div class="relative z-20 flex w-full md:items-end px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
+      <div class="container box-border items-center md:w-full md:h-[80vh] mx-auto flex justify-center lg:items-center md:flex-wrap">
+        <!-- Billede og GIF -->
+        <div class="w-[41%] box-border relative md:pl-10">
+          <!-- Beerglass -->
+          <div class="relative flex place-content-end pt-8">
+            <Image src={beerglass2} alt="øl" class="w-60 md:w-96 h-auto" />
+            <div class="absolute right-[21%] top-[69%] sm:top-[69%] sm:right-[20%] md:top-[69%] md:right-[21%] lg:top-[65%] lg:right-[19%] transform -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-soft-light">
+              <Image src={gif} alt="GIF" class="w-6 sm:w-6 md:w-7 lg:w-8 h-auto" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Tekst -->
+        <div class="w-[41%] pt-28 md:pt-14">
+          <h3 class="font-bold">GOLDEN TASTE</h3>
+          <p class="md:sw-2/3">Golden Taste er en perfekt afbalanceret øl, der kombinerer gyldne maltnoter med en frisk, frugtagtig aroma. En elegant smagsoplevelse, der forkæler dine sanser ved hver tår.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="pt-24">
-    <Image src={car} alt="Baggrund" class="w-52 pt-36 lg:w-auto fotoinview" />
+  <section class="pt-20">
+    <Image src={car} alt="Baggrund" class="w-52 pt-36 lg:w-auto bilinview" />
 
     <div class="bg-rosa-500 py-32 pl-4">
       <h2 class="text-blue-500 text-large lg:flex lg:justify-center">VI LEVERER DIN ORDRE</h2>
@@ -142,7 +192,7 @@ import gif from "../assets/images/bubbles.gif";
       </div>
 
       <div class="lg:flex lg:justify-center pt-6">
-        <Button variant="primary" size="medium" href="/your-link"> KØB ABONNEMENT </Button>
+        <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
       </div>
     </div>
   </section>
@@ -153,21 +203,25 @@ import gif from "../assets/images/bubbles.gif";
 
     <form class="flex flex-col items-center space-y-4 w-full max-w-sm mx-auto pt-4">
       <input type="email" placeholder="Indtast din e-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required />
-      <Button variant="secondary" size="medium" href="/your-link"> TILMELD </Button>
+      <Button variant="secondary" size="medium" href="/your-link">TILMELD</Button>
     </form>
   </section>
-
-  <section class="lg:px-2 max-w-screen-xl mx-auto pb-36 pl-4">
+  <section id="bestseller" class="lg:px-2 max-w-screen-xl mx-auto pb-36 pl-4 transform rotate-15 transition-all duration-700">
     <h2 class="text-large pt-36 pb-14">BESTSELLER</h2>
     <div class="lg:flex lg:justify-center">
-      <Image src={sweetoliven} alt="Baggrund" class="w-36 rotate-12 lg:w-56" />
+      <Image src={sweetoliven} alt="Baggrund" class="w-36 rotate-15 lg:w-56" id="fotobes" />
       <div class="pt-10 lg:w-2/4 lg:pt-72 lg:pl-32">
         <h2 class="text-medium">SWEET OLIVE</h2>
         <p>Nyd vores organiske bestseller - en harmonisk balance af friske noter og uventede smagsnuancer - en ægte smagsoplevelse i hvert glas.</p>
-        <p>Denne bestseller er altid med i vores abonnementer, så ligegyldigt hvilken pakke du køber vil du altid kunne nyde denne lækre øl.</p>
+        <p>Denne bestseller er altid med i vores abonnementer, så ligegyldigt hvilken pakke du køber, vil du altid kunne nyde denne lækre øl.</p>
       </div>
     </div>
   </section>
+  <button id="scroll_to_top" class="fixed top-[81%] left-[90%] pointer bg-blue-500 rounded p-2"
+    ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-grey-500">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"></path>
+    </svg>
+  </button>
 </MainLayout>
 
 <style>
@@ -184,7 +238,20 @@ import gif from "../assets/images/bubbles.gif";
       transform: translateX(0) scale(1);
     }
   }
-
+  @keyframes pulseScale {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    40% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+  .custom-pulse {
+    animation: pulseScale 2s infinite;
+  }
   .beer-image {
     animation: slide-in 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   }
@@ -212,49 +279,92 @@ import gif from "../assets/images/bubbles.gif";
   .beer-image:nth-child(7) {
     animation-delay: 1.4s;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 </style>
 
 <script>
   /* Import af Motion One biblioteket */
   import { animate, stagger, inView, scroll, timeline } from "motion";
+  let hasAnimated1 = false;
+  let hasAnimated2 = false;
+  let hasAnimated3 = false;
+  let hasAnimated4 = false;
+
   inView(".fotoinview", () => {
-    animate(".fotoinview", { x: [-2000, 0] }, { duration: 3 });
-  });
-  animate("body", { opacity: [0, 1] }, { duration: 1 });
-
-  import Splitting from "splitting";
-  import "splitting/dist/splitting.css"; // Importer Splitting.js CSS
-  import gsap from "gsap";
-  document.addEventListener("DOMContentLoaded", () => {
-    const overlay = document.getElementById("overlay");
-    const herotitle = document.getElementById("herotitle").querySelector("h2");
-
-    if (herotitle) {
-      const result = Splitting({ target: herotitle, by: "chars" });
-
-      const chars = result[0].chars;
-
-      const tl = gsap.timeline();
-
-      tl.to(overlay, {
-        duration: 1,
-        scaleY: 0,
-        transformOrigin: "top",
-        ease: "power2.inOut",
-      });
-
-      tl.from(
-        chars,
-        {
-          opacity: 0,
-          y: 80,
-          rotateX: -90,
-          stagger: 0.05,
-          duration: 1,
-          ease: "back.out(1.7)",
-        },
-        "-=0.5"
-      );
+    if (!hasAnimated1) {
+      animate(".fotoinview", { x: [-2000, 0] }, { duration: 2, delay: 0.2 });
+      hasAnimated1 = true;
     }
   });
+
+  inView(".inview", () => {
+    if (!hasAnimated2) {
+      animate(".inview", { x: [2000, 0] }, { duration: 3, delay: 0.4 });
+      hasAnimated2 = true;
+    }
+  });
+
+  inView(".inview4", () => {
+    if (!hasAnimated3) {
+      animate(".inview4", { x: [2000, 0] }, { duration: 3, delay: 0.6 });
+      hasAnimated3 = true;
+    }
+  });
+
+  inView(".fotoinview3", () => {
+    if (!hasAnimated4) {
+      animate(".fotoinview3", { x: [-2000, 0] }, { duration: 3, delay: 0.8 });
+      hasAnimated4 = true;
+    }
+  });
+
+  inView(".bilinview", () => {
+    animate(".bilinview", { x: [-2000, 0] }, { duration: 3 });
+  });
+
+  inView(".inview2", () => {
+    animate(".inview2", { y: [-2000, 0] }, { duration: 3 });
+  });
+
+  animate("body", { opacity: [0, 1] }, { duration: 1 });
+
+  // Create an IntersectionObserver to detect when the section is in view
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add the 'animate' class when the section enters the view
+          entry.target.classList.add("animate");
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger animation when 50% of the section is visible
+    }
+  );
+
+  const bestsellerSection = document.getElementById("bestseller");
+  const fotobesImage = document.getElementById("fotobes");
+
+  observer.observe(bestsellerSection);
+  observer.observe(fotobesImage);
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (document.documentElement.scrollTop > 500) {
+      document.querySelector("#scroll_to_top").style.display = "block";
+    } else {
+      document.querySelector("#scroll_to_top").style.display = "none";
+    }
+  }
+
+  document.querySelector("#scroll_to_top").addEventListener("click", scrollToTop);
+  function scrollToTop() {
+    document.documentElement.scrollTop = 0;
+  }
 </script>
