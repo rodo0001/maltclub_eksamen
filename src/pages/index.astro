@@ -206,10 +206,10 @@ import bg3 from "../assets/images/bg3.svg";
       <Button variant="secondary" size="medium" href="/your-link">TILMELD</Button>
     </form>
   </section>
-  <section id="bestseller" class="lg:px-2 max-w-screen-xl mx-auto pb-36 pl-4 transform rotate-50 transition-all duration-700">
+  <section id="bestseller" class="lg:px-2 max-w-screen-xl mx-auto pb-36 pl-4 transform rotate-15 transition-all duration-700">
     <h2 class="text-large pt-36 pb-14">BESTSELLER</h2>
     <div class="lg:flex lg:justify-center">
-      <Image src={sweetoliven} alt="Baggrund" class="w-36 rotate-50 lg:w-56" id="fotobes" />
+      <Image src={sweetoliven} alt="Baggrund" class="w-36 rotate-15 lg:w-56" id="fotobes" />
       <div class="pt-10 lg:w-2/4 lg:pt-72 lg:pl-32">
         <h2 class="text-medium">SWEET OLIVE</h2>
         <p>Nyd vores organiske bestseller - en harmonisk balance af friske noter og uventede smagsnuancer - en ægte smagsoplevelse i hvert glas.</p>
@@ -217,6 +217,11 @@ import bg3 from "../assets/images/bg3.svg";
       </div>
     </div>
   </section>
+  <button id="scroll_to_top" class="fixed top-[81%] left-[90%] pointer bg-blue-500 rounded p-2"
+    ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-grey-500">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"></path>
+    </svg>
+  </button>
 </MainLayout>
 
 <style>
@@ -325,16 +330,18 @@ import bg3 from "../assets/images/bg3.svg";
 
   animate("body", { opacity: [0, 1] }, { duration: 1 });
 
+  // Create an IntersectionObserver to detect when the section is in view
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          // Add the 'animate' class when the section enters the view
           entry.target.classList.add("animate");
         }
       });
     },
     {
-      threshold: 0.6,
+      threshold: 0.5, // Trigger animation when 50% of the section is visible
     }
   );
 
@@ -343,4 +350,21 @@ import bg3 from "../assets/images/bg3.svg";
 
   observer.observe(bestsellerSection);
   observer.observe(fotobesImage);
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (document.documentElement.scrollTop > 500) {
+      document.querySelector("#scroll_to_top").style.display = "block";
+    } else {
+      document.querySelector("#scroll_to_top").style.display = "none";
+    }
+  }
+
+  document.querySelector("#scroll_to_top").addEventListener("click", scrollToTop);
+  function scrollToTop() {
+    document.documentElement.scrollTop = 0;
+  }
 </script>
