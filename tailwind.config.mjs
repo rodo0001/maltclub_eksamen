@@ -78,27 +78,26 @@ export default {
 
       fontSize: {
         body: ["1rem", { lineHeight: "1.5rem" }],
-        xsmall: ["0.5rem", { lineHeight: "0.75rem" }],
-        small: ["0.75rem", { lineHeight: "1rem" }],
-        medium: ["4.375rem", { lineHeight: "4.5rem" }],
-        large: ["5.625rem", { lineHeight: "5.625rem" }],
-        xlarge: ["9.75rem", { lineHeight: "8.125rem" }],
-        // "2xlarge": ["2rem", { lineHeight: "2.25rem" }],
-        // "3xlarge": ["2.5rem", { lineHeight: "2.75rem" }],
-        // "4xlarge": ["3rem", { lineHeight: "3.25rem" }],
-        // "5xlarge": ["3.625rem", { lineHeight: "3.875rem" }],
-        // "6xlarge": ["5.875rem", { lineHeight: "6.125rem" }],
+        xsmall: ["1.063rem", { lineHeight: "1.188rem" }],
+        small: ["1.438rem", { lineHeight: "1.563rem" }],
+        medium: ["2.25rem", { lineHeight: "2.5rem" }],
+        large: ["3.125rem", { lineHeight: "3.25rem" }],
+        xlarge: ["3.438rem", { lineHeight: "3.563rem" }],
+        "2xlarge": ["3.75rem", { lineHeight: "3.875rem" }],
+        "3xlarge": ["5rem", { lineHeight: "5.125rem" }],
+        "4xlarge": ["5.625rem", { lineHeight: "5.75rem" }],
+        "5xlarge": ["9.375rem", { lineHeight: "9.375rem" }],
       },
-      // 6xlarge 94px - linehigh 98
-      // 5xlarge: 58 px - linehigh 62px
-      // 4xlarge: 48 px - linehigh 52px
-      // 3xlarge: 40 px - linehigh 44px
-      // 2xlarge: 32 px - linehigh 36px
-      // Xlarge: 150 px - linehigh 130px
-      // large: 18 px - linehigh 22px
-      // medium: 14 px - linehigh 18px
-      // small: 12 px - linehigh 16 px
-      // xsmall: 8 px - linehigh 12 px
+
+      //H1-Large: 5xlarge: 150 px - linehigh 150px
+      //H2-Large: 4xlarge: 90 px - linehigh 92px
+      //H1-Medium: 3xlarge: 80 px - linehigh 82px
+      //H2-Medium: 2xlarge: 60px px - linehigh 62pxd
+      //H1-Small: Xlarge: 55px px - linehigh 57px
+      //H2-Small: large: 50px px - linehigh 52px
+      //H3-Large: medium:  36px - linehigh 38px
+      //H3-Medium: small: 23px - linehigh 25px
+      //H3-Small: xsmall: 17px - linehigh 19px
       // Body: 16px - linehigh 24px
 
       fontWeight: {
