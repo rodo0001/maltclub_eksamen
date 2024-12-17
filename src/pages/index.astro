@@ -49,20 +49,20 @@ import bg3 from "../assets/images/bg3.svg";
     <div class="absolute inset-0 py-20 lg:py-56 bg-rosa-500 top-36 lg:top-72 z-10"></div>
   </section>
 
-  <section class="pt-36 pb-36 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
-    <h2 class="text-blue-500 pb-16 text-large md:text-2xl lg:text-4xlarge">BOKS ABONNEMENT</h2>
-    <div class="lg:grid lg:grid-cols-[1fr_auto] gap-6">
-      <div class="lg:w-4/5 lg:flex lg:flex-col lg:place-content-center">
+  <section class="pt-20 pb-14 md:pt-36 md:pb-36 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
+    <h2 class="text-blue-500 pb-6 md:pb-16 text-large lg:text-4xlarge">BOKS ABONNEMENT</h2>
+    <div class="md:grid md:grid-cols-[1fr_auto] gap-6">
+      <div class="md:w-4/5 md::flex md::flex-col md:place-content-center">
         <h3 class="lg:text-small text-xsmall font-bold text-blue-500">GØR HVER MÅNED TIL EN SMAGSREJSE!</h3>
-        <p class="text-blue-500 pt-7">Vælg et øl abonnement, der passer til dig, og oplev nye håndplukkede specialøl, som du ikke finder andre steder kun et klik væk.</p>
+        <p class="text-blue-500 pt-3 md:pt-7">Vælg et øl abonnement, der passer til dig, og oplev nye håndplukkede specialøl, som du ikke finder andre steder kun et klik væk.</p>
         <p class="text-blue-500 pb-10 pt-4">Find din favorit i dag og gør hver måned til noget særligt!</p>
         <div class="pb-9">
           <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
         </div>
       </div>
 
-      <div class="bg-rosa-500 w-96 h-80 lg:pt-4 rounded flex justify-center items-center">
-        <a href="/abonnement"> <Image src={boks} alt="billede" class="w-80 custom-pulse" /></a>
+      <div class="bg-rosa-500 h-80 w-70 md:w-96 md:h-80 lg:pt-4 rounded flex justify-center items-center">
+        <a href="/abonnement"> <Image src={boks} alt="billede" class="w-64 md:w-80 custom-pulse" /></a>
       </div>
     </div>
   </section>
@@ -80,59 +80,116 @@ import bg3 from "../assets/images/bg3.svg";
         <div class="w-[41%] box-border relative md:pl-10">
           <!-- Beerglass -->
           <div class="relative flex place-content-end pt-8">
-            <Image src={beerglass1} alt="øl" class="w-56 md:w-96 h-auto md:pl-10" />
-            <div class="absolute right-[21%] top-[69%] sm:top-[66%] sm:right-[20%] md:top-[69%] md:right-[19%] lg:top-[64%] lg:right-[17%] transform -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-soft-light">
-              <Image src={gif} alt="GIF" class="w-6 sm:w-6 md:w-7 lg:w-9 h-auto" />
+            <Image src={beerglass1} alt="øl" class="w-52 md:w-96 h-auto md:pl-10" />
+            <div class="absolute right-[21%] top-[70%] sm:top-[66%] sm:right-[20%] md:top-[69%] md:right-[19%] lg:top-[64%] lg:right-[17%] transform -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-soft-light">
+              <Image src={gif} alt="GIF" class="w-4 sm:w-7 md:w-7 lg:w-9 h-auto" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Tekst -->
+        <div class="w-1/2 md:w-[41%] pt-28 md:pt-14">
+          <h3 class="font-bold md:text-small text-xsmall">Smag vores Nyhed!</h3>
+          <p class="w-44 md:w-2/3 text-xs md:text-body">Vores yngste medlem. En alkoholfri tørslukker med dybde og lækre toner af skovbær. Nyd den kold - skål!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-500 py-28">
+    <div class="px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
+      <h3 class="text-grey-500 text-center flex justify-center md:pl-7 lg:text-medium md:text-small text-xsmall">Tilmeld dig vores nyhedsbrev og spar 20% på første måned</h3>
+      <p class="text-xs text-center md:text-body flex justify-center text-grey-500 pt-4 pl-7">Hop med på bølgen og start dit øl-eventyr med 20% rabat i første måned!</p>
+
+      <form class="flex flex-col items-center space-y-4 w-full max-w-sm mx-auto pt-4">
+        <input type="email" placeholder="Indtast din e-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required />
+        <Button variant="secondary" size="medium" href="/your-link">TILMELD</Button>
+      </form>
+    </div>
+  </section>
+
+  <section class="pt-10 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto place-content-center">
+    <div class="relative">
+      <Image src={klat} alt="billede" class="w-4/5 md:pt-32 sm:w-4/5 lg:pt-3 m-auto lg:w-3/5" />
+      <div class="absolute md:top-12 lg:top-0 top-15 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-full">
+        <h2 class="text-blue-500 lg:text-4xlarge md:text-2xlarge text-large md:pt-22">DINE FORDELE</h2>
+        <h2 class="text-blue-500">VED ET MALTCLUB ABONNEMENT</h2>
+      </div>
+    </div>
+
+    <div class="mx-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 pt-7 md:pt-20">
+      <div class="w-72 min-h-full flex flex-col items-center p-4">
+        <Image src={info1} alt="billede" class="w-28 h-24 mx-auto" />
+        <h3 class="text-xsmall font-bold text-blue-500 pt-4">BESTIL DIT MALTCLUB ØL ABONNMENT</h3>
+        <p class="text-blue-500 pt-2">Vælg hvilket øl abonnement du ønsker at modtage. Få leveret et lækkert udvalg af kvalitetsøl fra danske og udenlandske bryggerier direkte hjem til dig eller din nærmeste pakkeshop.</p>
+      </div>
+
+      <div class="w-72 min-h-full flex flex-col items-center p-4">
+        <Image src={info2} alt="billede" class="w-32 h-24 mx-auto" />
+        <h3 class="text-xsmall font-bold text-blue-500 pt-4">NYD DINE ØL I GODT SELVSKAB</h3>
+        <p class="text-blue-500 pt-2">Inviter gode venner eller familie på besøg og byd på lækre specialøl. Med et MaltClub øl abonnement er du sikker på at kunne byde på gode øl til enhver lejlighed - med mindre du selvfølgelig har nået at drikke dine øl inden du får gæster på besøg.</p>
+      </div>
+
+      <div class="w-72 min-h-full flex flex-col items-center p-4">
+        <Image src={info3} alt="billede" class="w-20 h-24 mx-auto" />
+        <h3 class="text-xsmall font-bold text-blue-500 pt-4">UNIKKE OG SMAGSVÆKKENDE</h3>
+        <p class="text-blue-500 pt-2">MaltClub giver dig en kulinarisk smagsoplevelse med et udvalg af unikke specialøl. Samtidig sparer du tid og får adgang til varianter, som du måske aldrig ville opdage i dit lokale supermarked.</p>
+      </div>
+
+      <div class="w-72 min-h-full flex flex-col items-left p-4">
+        <Image src={info4} alt="billede" class="w-20 h-24 mx-auto" />
+        <h3 class="text-xsmall font-bold text-blue-500 pt-4 text-left">SPAR TID OG PENGE</h3>
+        <p class="text-blue-500 pt-2">Hos MaltClub kombinerer vi smag og værdi, så du kan nyde unikke øl af høj kvalitet til billigere penge - uden at bruge tid på at lede efter dem.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="">
+    <Image src={car} alt="Baggrund" class="w-64 md:w-auto pt-20 lg:w-auto bilinview" />
+
+    <div class="bg-rosa-500 py-32 pl-4">
+      <div class="px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
+        <h2 class="text-center text-blue-500 lg:text-4xlarge md:text-2xlarge text-large lg:flex lg:justify-center">VI LEVERER DIN ORDRE</h2>
+        <div class="lg:flex lg:justify-center">
+          <p class="text-blue-500 lg:w-3/6 pt-4 text-center">Læn dig tilbage - vi leverer dine øl fra MaltClub i starten af hver måned. Øllene leveres direkte hjem til dig eller til nærmeste pakkeshop - det kunne ikke være lettere!</p>
+        </div>
+
+        <div class="flex justify-center pt-6">
+          <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative min-h-full md:min-h-screen flex flex-wrap overflow-hidden">
+    <!-- Baggrund -->
+    <div class="absolute z-1 inset-0 object-cover">
+      <Image src={bg3} alt="Baggrund" class="w-full h-full object-cover object-center" />
+    </div>
+
+    <!-- Indhold -->
+    <div class="relative z-20 flex w-full md:items-end px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
+      <div class="container box-border items-center md:w-full md:h-[80vh] mx-auto flex justify-center lg:items-center md:flex-wrap">
+        <!-- Billede og GIF -->
+        <div class="w-[41%] box-border relative md:pl-10">
+          <!-- Beerglass -->
+          <div class="relative flex place-content-end pt-8">
+            <Image src={beerglass2} alt="øl" class="w-60 md:w-96 h-auto" />
+            <div class="absolute right-[20%] top-[70%] sm:top-[64%] sm:right-[20%] md:top-[69%] md:right-[21%] lg:top-[65%] lg:right-[19%] transform -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-soft-light">
+              <Image src={gif} alt="GIF" class="w-4 sm:w-6 md:w-7 lg:w-8 h-auto" />
             </div>
           </div>
         </div>
 
         <!-- Tekst -->
         <div class="w-[41%] pt-28 md:pt-14">
-          <h3 class="font-bold md:text-small text-xsmall">Smag vores Nyhed!</h3>
-          <p class="md:w-2/3">Vores yngste medlem. En alkoholfri tørslukker med dybde og lækre toner af skovbær. Nyd den kold - skål!</p>
+          <h3 class="font-bold md:text-small text-xsmall">GOLDEN TASTE</h3>
+          <p class="text-xs w-64 md:sw-2/3">Golden Taste er en perfekt afbalanceret øl, der kombinerer gyldne maltnoter med en frisk, frugtagtig aroma. En elegant smagsoplevelse, der forkæler dine sanser ved hver tår.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="pt-28 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
-    <div class="relative">
-      <Image src={klat} alt="billede" class="w-3/5 pt-32 sm:w-3/5 lg:pt-10 m-auto lg:w-3/5" />
-      <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-full">
-        <h2 class="text-blue-500 lg:text-4xlarge md:text-2xlarge text-large pt-22 custom-pulse">DINE FORDELE</h2>
-        <h2 class="text-blue-500">VED ET MALTCLUB ABONNEMENT</h2>
-      </div>
-    </div>
-
-    <div class="mx-auto max-w-sm place-content-center md:grid md:grid-cols-[auto_auto] md:grid-rows-4">
-      <div class="pt-28 md:pl-16 md:col-start-1 md:row-start-1 fotoinview">
-        <Image src={info1} alt="billede" class="w-60" />
-        <h3 class="text-xsmall font-bold text-blue-500 pt-4">BESTIL DIT MALTCLUB ØL ABONNMENT</h3>
-        <p class="text-blue-500 w-96 pt-2">Vælg hvilket øl abonnement du ønsker at modtage. Få leveret et lækkert udvalg af kvalitetsøl fra danske og udenlandske bryggerier direkte hjem til dig eller din nærmeste pakkeshop.</p>
-      </div>
-
-      <div class="pt-10 md:pl-16 md:col-start-2 md:row-start-2 inview">
-        <Image src={info2} alt="billede" class="w-60" />
-        <h3 class="text-xsmall font-bold text-blue-500 pt-4">NYD DINE ØL I GODT SELVSKAB</h3>
-        <p class="text-blue-500 w-96 pt-2">Inviter gode venner eller familie på besøg og byd på lækre specialøl. Med et MaltClub øl abonnement er du sikker på at kunne byde på gode øl til enhver lejlighed - med mindre du selvfølgelig har nået at drikke dine øl inden du får gæster på besøg.</p>
-      </div>
-
-      <div class="pt-10 md:pl-16 md:col-start-1 md:row-start-3 fotoinview3">
-        <Image src={info3} alt="billede" class="w-24" />
-        <h3 class="text-xsmall font-bold text-blue-500 pt-4">UNIKKE OG SMAGSVÆKKENDE</h3>
-        <p class="text-blue-500 w-96 pt-2">MaltClub giver dig en kulinarisk smagsoplevelse med et udvalg af unikke specialøl. Samtidig sparer du tid og får adgang til varianter, som du måske aldrig ville opdage i dit lokale supermarked.</p>
-      </div>
-
-      <div class="pt-10 md:pl-16 md:col-start-2 md:row-start-4 inview4">
-        <Image src={info4} alt="billede" class="w-36" />
-        <h3 class="text-xsmall font-bold text-blue-500 pt-4">SPAR TID OG PENGE</h3>
-        <p class="text-blue-500 w-96 pt-2">Hos MaltClub kombinerer vi smag og værdi, så du kan nyde unikke øl af høj kvalitet til billigere penge - uden at bruge tid på at lede efter dem.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="pt-36">
+  <section class="">
     <div class="bg-rosa-500 py-32">
       <!-- Container -->
       <div class="max-w-screen-lg mx-auto flex flex-col items-center gap-10 px-4">
@@ -153,77 +210,12 @@ import bg3 from "../assets/images/bg3.svg";
     </div>
   </section>
 
-  <section class="relative min-h-full md:min-h-screen flex flex-wrap overflow-hidden">
-    <!-- Baggrund -->
-    <div class="absolute z-1 inset-0 object-cover">
-      <Image src={bg3} alt="Baggrund" class="w-full h-full object-cover object-center" />
-    </div>
-
-    <!-- Indhold -->
-    <div class="relative z-20 flex w-full md:items-end px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
-      <div class="container box-border items-center md:w-full md:h-[80vh] mx-auto flex justify-center lg:items-center md:flex-wrap">
-        <!-- Billede og GIF -->
-        <div class="w-[41%] box-border relative md:pl-10">
-          <!-- Beerglass -->
-          <div class="relative flex place-content-end pt-8">
-            <Image src={beerglass2} alt="øl" class="w-60 md:w-96 h-auto" />
-            <div class="absolute right-[21%] top-[69%] sm:top-[69%] sm:right-[20%] md:top-[69%] md:right-[21%] lg:top-[65%] lg:right-[19%] transform -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-soft-light">
-              <Image src={gif} alt="GIF" class="w-6 sm:w-6 md:w-7 lg:w-8 h-auto" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Tekst -->
-        <div class="w-[41%] pt-28 md:pt-14">
-          <h3 class="font-bold md:text-small text-xsmall">GOLDEN TASTE</h3>
-          <p class="md:sw-2/3">Golden Taste er en perfekt afbalanceret øl, der kombinerer gyldne maltnoter med en frisk, frugtagtig aroma. En elegant smagsoplevelse, der forkæler dine sanser ved hver tår.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="pt-20">
-    <Image src={car} alt="Baggrund" class="w-52 pt-36 lg:w-auto bilinview" />
-
-    <div class="bg-rosa-500 py-32 pl-4">
-      <h2 class="text-blue-500 lg:text-4xlarge md:text-2xlarge text-large lg:flex lg:justify-center">VI LEVERER DIN ORDRE</h2>
-      <div class="lg:flex lg:justify-center">
-        <p class="text-blue-500 lg:w-3/6 pt-4 lg:m-auto">Læn dig tilbage - vi leverer dine øl fra MaltClub i starten af hver måned. Øllene leveres direkte hjem til dig eller til nærmeste pakkeshop - det kunne ikke være lettere!</p>
-      </div>
-
-      <div class="lg:flex lg:justify-center pt-6">
-        <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-blue-500 py-28">
-    <h3 class="text-grey-500 flex justify-center pl-7 lg:text-medium md:text-small text-xsmall">Tilmeld dig vores nyhedsbrev og spar 20% på første måned</h3>
-    <p class="flex justify-center text-grey-500 pt-4 pl-7">Hop med på bølgen og start dit øl-eventyr med 20% rabat i første måned!</p>
-
-    <form class="flex flex-col items-center space-y-4 w-full max-w-sm mx-auto pt-4">
-      <input type="email" placeholder="Indtast din e-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required />
-      <Button variant="secondary" size="medium" href="/your-link">TILMELD</Button>
-    </form>
-  </section>
-  <section id="bestseller" class="lg:px-2 max-w-screen-xl mx-auto pb-36 pl-4 transform rotate-15 transition-all duration-700">
-    <h2 class="lg:text-4xlarge md:text-3xlarge text-large pt-36 pb-14">BESTSELLER</h2>
-    <div class="lg:flex lg:justify-center">
-      <Image src={sweetoliven} alt="Baggrund" class="w-36 rotate-15 lg:w-56" id="fotobes" />
-      <div class="pt-10 lg:w-2/4 lg:pt-72 lg:pl-32">
-        <h2 class="lg:text-3xlarge text-large">SWEET OLIVE</h2>
-        <p>Nyd vores organiske bestseller - en harmonisk balance af friske noter og uventede smagsnuancer - en ægte smagsoplevelse i hvert glas.</p>
-        <p>Denne bestseller er altid med i vores abonnementer, så ligegyldigt hvilken pakke du køber, vil du altid kunne nyde denne lækre øl.</p>
-      </div>
-    </div>
-  </section>
   <button id="scroll_to_top" class="fixed top-[81%] left-[90%] pointer bg-blue-500 rounded p-2"
     ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-grey-500">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"></path>
     </svg>
   </button>
 </MainLayout>
-
 <style>
   .image-container {
     opacity: 0;
@@ -247,15 +239,6 @@ import bg3 from "../assets/images/bg3.svg";
     }
   }
 
-  @keyframes rotateToRight {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(30deg); /* Roterer til højre */
-    }
-  }
-
   /* Anvend animationen på billederne */
   .slide-left {
     animation: slideInFromLeft 1.5s ease-out forwards;
@@ -263,45 +246,31 @@ import bg3 from "../assets/images/bg3.svg";
 
   /* Forsinkelse for hvert billede, så de glider ind én ad gangen */
   .beer-img:nth-child(1) {
-    animation:
-      slideInFromLeft 1.5s ease-out forwards,
-      rotateToRight 1s ease-in forwards;
+    animation: slideInFromLeft 1.5s ease-out forwards;
     animation-delay: 1.4s, 2s; /* Glider først ind, derefter roterer */
   }
   .beer-img:nth-child(2) {
-    animation:
-      slideInFromLeft 1.5s ease-out forwards,
-      rotateToRight 1s ease-in forwards;
+    animation: slideInFromLeft 1.5s ease-out forwards;
     animation-delay: 1.2s, 2.6s;
   }
   .beer-img:nth-child(3) {
-    animation:
-      slideInFromLeft 1.5s ease-out forwards,
-      rotateToRight 1s ease-in forwards;
+    animation: slideInFromLeft 1.5s ease-out forwards;
     animation-delay: 1s, 3.2s;
   }
   .beer-img:nth-child(4) {
-    animation:
-      slideInFromLeft 1.5s ease-out forwards,
-      rotateToRight 1s ease-in forwards;
+    animation: slideInFromLeft 1.5s ease-out forwards;
     animation-delay: 0.8s, 3.8s;
   }
   .beer-img:nth-child(5) {
-    animation:
-      slideInFromLeft 1.5s ease-out forwards,
-      rotateToRight 1s ease-in forwards;
+    animation: slideInFromLeft 1.5s ease-out forwards;
     animation-delay: 0.6s, 4.4s;
   }
   .beer-img:nth-child(6) {
-    animation:
-      slideInFromLeft 1.5s ease-out forwards,
-      rotateToRight 1s ease-in forwards;
+    animation: slideInFromLeft 1.5s ease-out forwards;
     animation-delay: 0.4s, 5s;
   }
   .beer-img:nth-child(7) {
-    animation:
-      slideInFromLeft 1.5s ease-out forwards,
-      rotateToRight 1s ease-in forwards;
+    animation: slideInFromLeft 1.5s ease-out forwards;
     animation-delay: 0.2s, 5.6s;
   }
   @keyframes slide-in {

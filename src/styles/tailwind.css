@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  /* p{
-        @apply text-body;
-    } */
+  p {
+    @apply text-body;
+  }
 
   h1,
   h2 {
