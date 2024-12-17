@@ -36,15 +36,15 @@ import beer from "../assets/images/4_beer.png";
     </ul>
   </div>
 
-  <div class="flex justify-center md:items-start pt-20">
+  <div class="flex justify-center md:items-start md:pt-20">
     <div class="w-full max-w-sm md:max-w-5xl">
       <div class="flex">
         <div class="flex-1 text-center">
-          <h2 class="inline-block text-blue-500 md:text-large md:px-4">DIN BESTILLING</h2>
+          <h2 class="text-blue-500 invisible sm:visible md:text-large lg:text-large md:px-4">DIN BESTILLING</h2>
         </div>
 
         <div class="flex-1 text-center">
-          <h2 class="text-blue-500 inline-block md:text-large md:px-4">BETALING</h2>
+          <h2 class="text-blue-500 invisible sm:visible md:text-large lg:text-large md:px-4">BETALING</h2>
         </div>
       </div>
 
@@ -87,12 +87,12 @@ import beer from "../assets/images/4_beer.png";
                 <div>
                   <input class="rounded-full" type="checkbox" id="tilmeld1" name="tilmeld1" value="nyhedsbrev" />
                   <label class="text-sm" for="tilmeld1"> TILMELD NYHEDSBREV</label><br />
-                  <p class="text-xs w-1/2">Ved at tilmelde dig vores nyhedsbrev accepterer du vores brugerbetingelser og privatlivspolitik. Du kan til enhver tid afmelde dig via linket i vores e-mails.</p>
+                  <p class="text-xs w-72 md:w-96">Ved at tilmelde dig vores nyhedsbrev accepterer du vores brugerbetingelser og privatlivspolitik. Du kan til enhver tid afmelde dig via linket i vores e-mails.</p>
                 </div>
                 <!-- Postnummer & By -->
 
                 <!-- Submit knap -->
-                <div class="flex items-center">
+                <div class="flex items-center pb-6 pt-4">
                   <Button variant="primary" size="large" href="/betaling">GODKEND OG BETAL</Button>
                 </div>
               </form>

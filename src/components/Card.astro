@@ -12,22 +12,22 @@ import Button from "../components/Button.astro";
       <p class="text-md font-light text-center text-blue-500">{pris}</p>
     </div>
 
-    <div class="flex justify-center pb-4">
+    <div class="flex justify-center pb-6">
       <img src={cardimage} alt={cardimagealt} class="w-72" />
     </div>
     <div class="flex justify-center">
       <p class="text-sm text-center font-normal text-blue-500 w-96">{tekst}</p>
     </div>
-    <!-- Denne del tilføjer teksten med separator og stjerner -->
+
     <div class="flex justify-center text-xs text-grey-900 mt-4 font-light">
-      <p class="pr-1">Fri fragt inkluderet</p>
-      <span class="px-1">|</span>
-      <p class="pr-1">Månedligt abonnement</p>
-      <span class="px-1">|</span>
-      <p>Trustpilot <span class="">⭐⭐⭐</span></p>
+      <p class="pr-1 text-xs text-blue-500">Fri fragt inkluderet</p>
+      <span class="px-1 text-xs text-blue-500">|</span>
+      <p class="pr-1 text-xs text-blue-500">Månedligt abonnement</p>
+      <span class="px-1 text-xs text-blue-500">|</span>
+      <p class="text-xs text-blue-500">Trustpilot <span class="">⭐⭐⭐</span></p>
     </div>
 
-    <div class="flex justify-center pt-4">
+    <div class="flex justify-center pt-12">
       <Button variant="primary" size="medium" href="/registering">KØB ABONNEMENT</Button>
     </div>
   </div>
