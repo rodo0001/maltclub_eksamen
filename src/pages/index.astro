@@ -109,7 +109,7 @@ import bg3 from "../assets/images/bg3.svg";
   </section>
 
   <section class="pt-10 px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto place-content-center">
-    <div class="relative">
+    <div class="relative pb-10">
       <Image src={klat} alt="billede" class="w-4/5 md:pt-32 sm:w-4/5 lg:pt-3 m-auto lg:w-3/5" />
       <div class="absolute md:top-12 lg:top-0 top-15 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-full">
         <h2 class="text-blue-500 lg:text-4xlarge md:text-2xlarge text-large md:pt-22">DINE FORDELE</h2>
@@ -377,27 +377,6 @@ import bg3 from "../assets/images/bg3.svg";
   });
 
   animate("body", { opacity: [0, 1] }, { duration: 1 });
-
-  // Create an IntersectionObserver to detect when the section is in view
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Add the 'animate' class when the section enters the view
-          entry.target.classList.add("animate");
-        }
-      });
-    },
-    {
-      threshold: 0.5, // Trigger animation when 50% of the section is visible
-    }
-  );
-
-  const bestsellerSection = document.getElementById("bestseller");
-  const fotobesImage = document.getElementById("fotobes");
-
-  observer.observe(bestsellerSection);
-  observer.observe(fotobesImage);
 
   document.querySelector("#scroll_to_top").addEventListener("click", scrollToTop);
   function scrollToTop() {
