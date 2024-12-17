@@ -12,10 +12,6 @@
     font-family: koulen;
   }
 
-  /* CSS for initial state */
-  /* CSS for initial position */
-  /* CSS for the initial state of both the section and the image */
-  /* CSS for the initial state of both the section and the image */
   #bestseller {
     transform: rotate(15deg); /* Start with a slight rotation */
     transition: transform 1s ease; /* Smooth transition for rotation */
