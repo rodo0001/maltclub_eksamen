@@ -67,19 +67,19 @@ import bg3 from "../assets/images/bg3.svg";
     </div>
   </section>
 
-  <section class="relative h-screen md:min-h-screen flex flex-wrap overflow-hidden">
+  <section class="relative h-screen md:min-h-screen flex flex-wrap overflow-hidden bg-pink">
     <!-- Baggrund -->
-    <div class="absolute z-1 inset-0 object-cover">
-      <Image src={bg2} alt="Baggrund" class="max-w-fit h-full md:w-full object-cover object-center" />
+    <div class="absolute inset-0 z-0">
+      <Image src={bg2} alt="Baggrund" class="w-full h-full md:object-cover object-center" />
     </div>
 
     <!-- Indhold -->
-    <div class="relative z-20 flex w-full md:items-end px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
-      <div class="container box-border items-center md:w-full md:h-[80vh] mx-auto flex justify-center lg:items-center md:flex-wrap">
+    <div class="relative z-10 flex w-full items-center md:items-end px-4 sm:px-4 md:px-6 lg:px-2 max-w-screen-xl mx-auto">
+      <div class="container pt-52 md:pt-0 box-border items-center md:w-full md:h-[80vh] mx-auto flex justify-center lg:items-center md:flex-wrap">
         <!-- Billede og GIF -->
         <div class="w-[41%] box-border relative md:pl-10">
           <!-- Beerglass -->
-          <div class="relative flex place-content-end pt-20 md:pt-8">
+          <div class="relative flex place-content-end pt-8">
             <Image src={beerglass1} alt="øl" class="w-52 md:w-96 h-auto" />
             <div class="absolute right-[22%] top-[74%] sm:top-[66%] sm:right-[20%] md:top-[69%] md:right-[19%] lg:top-[64%] lg:right-[17%] transform -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-soft-light">
               <Image src={gif} alt="GIF" class="w-4 sm:w-7 md:w-7 lg:w-9 h-auto" />
@@ -88,7 +88,7 @@ import bg3 from "../assets/images/bg3.svg";
         </div>
 
         <!-- Tekst -->
-        <div class="w-1/2 md:w-[41%] pt-28 md:pt-14">
+        <div class="w-1/2 md:w-[41%] pt-14">
           <h3 class="font-bold md:text-small text-xsmall">Smag vores Nyhed!</h3>
           <p class="w-44 md:w-2/3 text-xs md:text-body">Vores yngste medlem. En alkoholfri tørslukker med dybde og lækre toner af skovbær. Nyd den kold - skål!</p>
         </div>

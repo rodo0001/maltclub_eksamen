@@ -61,6 +61,7 @@ export default {
       },
       white: "#fff",
       black: "#000",
+      pink: "#FFC1F6",
     },
     extend: {
       /* Tilføj din egen spacing nedenfor */
