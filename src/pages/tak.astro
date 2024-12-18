@@ -1,0 +1,58 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import boks from "../assets/images/boks.svg";
+---
+
+<MainLayout title="Maltclub">
+  <div class="container mx-auto pt-8 sm:w-1/2 md::w-1/2 px-4">
+    <ul class="flex justify-between items-center">
+      <li class="flex-1 text-center relative z-20">
+        <div class="w-6 h-6 rounded-full border-1 border-blue-500 flex items-center justify-center mx-auto bg-blue-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+          </svg>
+        </div>
+        <p class="mt-2 text-blue-500 text-xs">Vælg abonnement</p>
+      </li>
+
+      <li class="flex-1 text-center relative">
+        <div class="w-6 h-6 rounded-full border-1 border-blue-500 flex items-center justify-center mx-auto bg-blue-500 relative z-20">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+          </svg>
+        </div>
+        <p class="mt-2 text-blue-500 text-xs">Registrering</p>
+        <div class="absolute z-1 w-[195%] h-[1px] bg-blue-500 top-3 left-1/2 transform -translate-x-1/2 z-0"></div>
+      </li>
+
+      <li class="flex-1 text-center relative">
+        <div class="w-6 h-6 rounded-full border-1 border-blue-500 flex items-center justify-center mx-auto bg-blue-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+          </svg>
+        </div>
+        <p class="mt-2 text-blue-500 text-xs">Betalingsoplysninger</p>
+      </li>
+    </ul>
+  </div>
+
+  <section class="pt-16 pb-20">
+    <div class="pt-16 pb-16 border-2 border-blue-500 mx-5 md:mx-20 lg:flex">
+      <div>
+        <h2 class="text-blue-500 text-medium md:text-large lg:text-large px-10">TAK FOR DIN ORDRE!</h2>
+        <h3 class="text-small text-blue-500 font-bold px-10 pt-9">Kære XXX XXX</h3>
+        <p class="text-blue-500 px-10 pt-12 font-bold">Din bestilling: 1x Lys Boks (4x 75cl lyse specialøl)</p>
+        <p class="text-blue-500 px-10 pt-2">Tak fordi du handlede hos Maltclub og for din bestilling.</p>
+        <p class="text-blue-500 px-10">Du vil modtage dit øl abonnement i starten af hver måned - direkte til dit hjem eller nærmeste pakkeshop.</p>
+        <p class="text-blue-500 px-10">Hvis du har nogle spørgsmål kan du altid kontakte os via mail.</p>
+        <p class="text-blue-500 px-10">Vi håber du kommer til at nyde det.</p>
+        <h3 class="text-blue-500 text-small font-bold px-10 pt-12">Med venlig hilsen</h3>
+        <p class="text-blue-500 px-10 pt-2">Maltclub - din ølforhandler</p>
+      </div>
+      <div>
+        <Image src={boks} class="w-52 pl-2 md:w-72 lg:w-96" alt="Billede af øl" />
+      </div>
+    </div>
+  </section>
+</MainLayout>
