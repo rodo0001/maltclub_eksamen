@@ -3,7 +3,7 @@ const { cardimage = "", cardimagealt = "", navn = "", pris = "", tekst = "", bad
 import Button from "../components/Button.astro";
 ---
 
-<article class="relative rounded cursor-pointer overflow-hidden w-[280px] lg:w-[400px] h-[430px] lg:h-[550px] shadow-drop50 mb-32">
+<article class="relative rounded cursor-pointer overflow-hidden w-[280px] lg:w-[410px] h-[430px] lg:h-[550px] shadow-drop50 mb-32">
   <div class="absolute inset-0 bg-rosa-500 transform transition duration-400 ease-in-out hover:scale-105">
     <div class="text-center">
       <h3 class="text-small pt-6 font-semibold text-blue-500">{navn}</h3>
@@ -19,12 +19,12 @@ import Button from "../components/Button.astro";
       <p class="text-sm text-center font-normal text-blue-500 w-52 lg:w-80">{tekst}</p>
     </div>
 
-    <div class="flex justify-center text-xs text-grey-900 mt-4 font-light w-40 mx-auto">
+    <div class="flex justify-center text-xs text-grey-900 mt-4 font-light w-40 lg:w-96 mx-auto">
       <p class="pr-1 text-xs text-blue-500">Fri fragt inkluderet</p>
       <span class="px-1 text-xs text-blue-500">|</span>
       <p class="pr-1 text-xs text-blue-500">Månedligt abonnement</p>
       <span class="px-1 text-xs text-blue-500">|</span>
-      <p class="text-xs text-blue-500">Trustpilot <span class="">⭐⭐⭐</span></p>
+      <p class="text-xs text-blue-500">Trustpilot <span class="">{stjerner}</span></p>
     </div>
 
     <div class="flex justify-center pt-6 lg:pt-12">
