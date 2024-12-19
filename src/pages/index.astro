@@ -29,6 +29,21 @@ import gifi from "../assets/images/gifi.gif";
 ---
 
 <MainLayout title="Maltclub">
+  <!-- Pop-up -->
+  <div id="newsletterPopup" class="fixed inset-0 flex items-center text-blue-500 justify-center bg-black bg-opacity-50 hidden z-30">
+    <div class="bg-blue-500 p-10 rounded-lg shadow-lg max-w-sm w-full relative">
+      <!-- Luk-knap -->
+      <button id="closePopup" class="absolute top-3 right-3 text-grey-500 hover:text-grey-700 text-2xl font-bold"> &times; </button>
+
+      <h2 class="text-lg font-bold mb-4 text-center text-grey-500">Tilmeld dig vores nyhedsbrev!</h2>
+      <p class="text-sm text-grey-500 mb-4 text-center font-bold">Modtag eksklusive tilbud og få 20% på første køb.</p>
+      <form>
+        <input type="email" placeholder="Indtast din e-mail" class="w-full p-2 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <button type="submit" class="w-full border-orange-500 border-2 text-orange-500 p-2 rounded hover:border-grey-500 hover:text-grey-500"> Tilmeld </button>
+      </form>
+    </div>
+  </div>
+
   <section class="relative">
     <h1 class="flex justify-center text-blue-500 text-xlarge md:text-3xlarge lg:text-5xlarge inview2">MALTCLUB</h1>
     <h3 class="flex justify-center text-blue-500 font-bold lg:pt-4 text-xsmall md:text-small">DIN ØLFORHANDLER PÅ ABONNEMENT</h3>
@@ -349,8 +364,13 @@ import gifi from "../assets/images/gifi.gif";
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  // Lyt efter scroll-begivenheden for at vise/skjule knappen
-  window.onscroll = function () {
-    scrollFunction();
-  };
+  // Funktion til at vise pop-up med forsinkelse
+  setTimeout(() => {
+    document.getElementById("newsletterPopup").classList.remove("hidden");
+  }, 5000);
+
+  // Funktion til at lukke pop-up
+  document.getElementById("closePopup").addEventListener("click", () => {
+    document.getElementById("newsletterPopup").classList.add("hidden");
+  });
 </script>
