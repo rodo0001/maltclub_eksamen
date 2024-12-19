@@ -25,6 +25,7 @@ import gif from "../assets/images/bubbles.gif";
 import bg from "../assets/images/bg.svg";
 import bg2 from "../assets/images/bg2.svg";
 import bg3 from "../assets/images/bg3.svg";
+import beer5 from "../assets/images/5_beer.png";
 ---
 
 <MainLayout title="Maltclub">
@@ -118,18 +119,18 @@ import bg3 from "../assets/images/bg3.svg";
     </div>
 
     <div class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 pt-7 md:pt-12">
-      <div class="w-72 min-h-full flex flex-col mx-auto items-center p-4 border-blue-500 border-2 shadow-drop50 rounded transform transition duration-400 ease-in-out hover:scale-105">
+      <div class="w-72 min-h-full flex flex-col mx-auto items-center p-4 mb-6 border-blue-500 border-2 shadow-drop50 rounded transform transition duration-400 ease-in-out hover:scale-105">
         <Image src={info1} alt="billede" class="w-28 h-24 mx-auto" />
         <h3 class="text-xsmall font-bold text-blue-500 pt-4">BESTIL DIT ØL ABONNEMENT</h3>
         <p class="text-blue-500 pt-2">Vælg dit øl-abonnement og få kvalitetsøl fra danske og udenlandske bryggerier leveret til døren eller din pakkeshop.</p>
       </div>
-      <div class="w-72 min-h-full flex flex-col mx-auto items-center p-4 border-blue-500 border-2 shadow-drop50 rounded transform transition duration-400 ease-in-out hover:scale-105">
+      <div class="w-72 min-h-full flex flex-col mx-auto items-center p-4 mb-6 border-blue-500 border-2 shadow-drop50 rounded transform transition duration-400 ease-in-out hover:scale-105">
         <Image src={info2} alt="billede" class="w-32 h-24 mx-auto" />
         <h3 class="text-xsmall font-bold text-blue-500 pt-4">NYD DINE ØL I GODT SELVSKAB</h3>
         <p class="text-blue-500 pt-2">Inviter venner eller familie og nyd lækre specialøl - du har altid gode øl klar, medmindre du drikker dem før gæsterne kommer.</p>
       </div>
 
-      <div class="w-72 min-h-full flex flex-col mx-auto items-center p-4 border-blue-500 border-2 shadow-drop50 rounded transform transition duration-400 ease-in-out hover:scale-105">
+      <div class="w-72 min-h-full flex flex-col mx-auto items-center p-4 mb-6 border-blue-500 border-2 shadow-drop50 rounded transform transition duration-400 ease-in-out hover:scale-105">
         <Image src={info3} alt="billede" class="w-20 h-24 mx-auto" />
         <h3 class="text-xsmall font-bold text-blue-500 pt-4">UNIKKE OG SMAGSVÆKKENDE</h3>
         <p class="text-blue-500 pt-2">MaltClub giver dig unikke smagsoplevelser og sparer dig tid med specialøl, du ikke finder i supermarkedet.</p>
@@ -156,6 +157,18 @@ import bg3 from "../assets/images/bg3.svg";
         <div class="flex justify-center pt-6">
           <Button variant="primary" size="medium" href="/abonnement">KØB ABONNEMENT</Button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="">
+    <div class="py-24 bg-blue-500 md:flex md:justify-center md:gap-10">
+      <div class="w-1/2">
+        <h2 class="text-large text-grey-500">50% af vores medlemmer bestiller Mix Boks abonnementet</h2>
+        <p class="text-grey-500 pt-4 w-3/4">Oplev alsidigheden med vores Mix Boks abonnement, hvor du får 5 forskellige specialøl leveret direkte til døren. Boksen byder på en spændende blanding af lyse, mørke og alkoholfri øl, så der er noget for enhver smag. Med Mix Boks abonnementet får du ikke kun kvalitetsøl - du får også muligheden for at udvide din smagshorisont og opleve nye favoritter.</p>
+      </div>
+      <div class="py-10 bg-grey-500 rounded w-72 flex justify-center">
+        <Image src={info3} alt="billede" class="w-50" />
       </div>
     </div>
   </section>
@@ -188,6 +201,7 @@ import bg3 from "../assets/images/bg3.svg";
       </div>
     </div>
   </section>
+
   <section class="">
     <div class="bg-rosa-500 py-32">
       <!-- Container -->
