@@ -1,0 +1,41 @@
+---
+const correctPassword = "Maltclub";
+---
+
+<html lang="da">
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="bg-grey-500">
+    <h1 class="text-blue-500 text-large flex justify-center font-bold pt-16">MALTCLUB EKSAMEN</h1>
+    <div class="flex justify-center py-14">
+      <form id="loginForm">
+        <label class="text-blue-500" for="password">Adgangskode</label>
+        <input type="password" id="password" name="password" required />
+        <button class="text-blue-500 hover:text-orange-500" type="submit">Log ind</button>
+      </form>
+
+      <p id="error-message" style="color: red; display: none;">Forkert adgangskode, prøv igen.</p>
+    </div>
+    <script>
+      const correctPassword = "Maltclub";
+      const form = document.getElementById("loginForm");
+      const errorMessage = document.getElementById("error-message");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const password = document.getElementById("password").value;
+
+        if (password === correctPassword) {
+          localStorage.setItem("loggedIn", "true");
+          window.location.href = "/";
+        } else {
+          errorMessage.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>
